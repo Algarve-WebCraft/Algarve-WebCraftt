@@ -1,87 +1,94 @@
-<footer id="footer" class="footer-section">
-  <div class="wrapper wrapper--mobile-m">
+<footer id="footer" class="footer-section transition-slide">
+  <div class="wrapper wrapper--mobile-m" data-animate="fade-in">
 
     <div class="footer-video-container">
-      <video muted loop playsinline>
+      <video autoplay muted loop playsinline>
         <source src="/assets/videos/footer-glow-video.mp4" type="video/mp4">
       </video>
 
       <div class="cmp-header-text-container footer-video__text">
         <span class="cmp-topper-heading">READY WHEN YOU ARE</span>
-        <h2 id="works-section" class="cmp-main-heading">Let's build the website <br> your business <span class="cmp-heading-span cmp-gradient-text">deserves.</span></h2>
+        <h2 id="works-section" class="cmp-main-heading">{{ footer_text }} <span class="cmp-heading-span cmp-gradient-text">{{ footer_span }}</span></h2>
         <p class="cmp-main-text">A quick chat. Zero commitment. <br> €85/month if it's a fit.</p>
-        <a href="#" class="cmp-main-btn">START YOUR WEBSITE</a>
+        <a href="/contact/" class="cmp-main-btn cmp-main-btn--footer-btn">START YOUR WEBSITE</a>
       </div>
     </div>
 
-    <div>
-      <div class="footer-container">
-        <div class="footer-business-logo-container">
-          <a href="/">
+    <div class="footer-container">
+      <div class="footer-business-logo-container">
+        <a href="/">
             <img id="business-logo" src="/assets/logos/business-logo-white.webp" decoding="async" loading="lazy" alt="Algarve Webcraft's logo.">
           </a>
-          <p class="cmp-main-heading ">Lets build something <br> <span class="cmp-heading-span cmp-gradient-text">worth visiting.</span></p>
-        </div>
+        <p class="cmp-main-heading ">Lets build something <br> <span class="cmp-heading-span cmp-gradient-text">worth visiting.</span></p>
+      </div>
 
-        <nav class="footer-nav-links-container">
-          <h3>Links</h3>
+      <nav class="footer-nav-links-container">
+        <h3>Links</h3>
 
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/work/">Recent Work</a></li>
-            <li><a href="/pricing/">Pricing</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/work/">Recent Work</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
 
-        <div class="footer-contact-container">
-          <div>
-            <div class="svg-flex">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 17V12L14.5 10.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
+      <div class="footer-contact-container">
+        <div>
+          <div class="svg-flex">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17V12L14.5 10.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
 
-              <span>24/7</span>
-            </div>
-
-            <div class="svg-flex">
-              <svg viewBox="-5 0 41 30">
-                <path d="M28.784 3.226l-10.508 24.556-3.729-10.766-10.756-3.251zM31.389 0.024c-0.191 0-0.422 0.054-0.691 0.167l-29.833 12.659c-1.075 0.456-1.143 1.335-0.151 1.952l12.353 3.862 4.043 12.602c0.29 0.474 0.64 0.71 0.977 0.71 0.373 0 0.728-0.286 0.97-0.852l12.759-29.804c0.346-0.809 0.149-1.296-0.426-1.296z"></path>
-              </svg>
-
-              <span>Portugal, Algarve, Lagos</span>
-            </div>
-
-            <div class="svg-flex">
-              <svg viewBox="0 0 24 24">
-                <path d="M21 8L17.4392 9.97822C15.454 11.0811 14.4614 11.6326 13.4102 11.8488C12.4798 12.0401 11.5202 12.0401 10.5898 11.8488C9.53864 11.6326 8.54603 11.0811 6.5608 9.97822L3 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-
-              <span>algarvewebcraft@gmail.com</span>
-            </div>
+            <span>24/7</span>
           </div>
 
-          <div class="footer-logo-container">
-            <a href="">
+          <div class="svg-flex">
+            <svg viewBox="-5 0 41 30">
+              <path d="M28.784 3.226l-10.508 24.556-3.729-10.766-10.756-3.251zM31.389 0.024c-0.191 0-0.422 0.054-0.691 0.167l-29.833 12.659c-1.075 0.456-1.143 1.335-0.151 1.952l12.353 3.862 4.043 12.602c0.29 0.474 0.64 0.71 0.977 0.71 0.373 0 0.728-0.286 0.97-0.852l12.759-29.804c0.346-0.809 0.149-1.296-0.426-1.296z"></path>
+            </svg>
+
+            <span>Portugal, Algarve, Lagos</span>
+          </div>
+
+          <div class="svg-flex">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 8L17.4392 9.97822C15.454 11.0811 14.4614 11.6326 13.4102 11.8488C12.4798 12.0401 11.5202 12.0401 10.5898 11.8488C9.53864 11.6326 8.54603 11.0811 6.5608 9.97822L3 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+
+            <span>algarvewebcraft@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="footer-logo-container">
+          <a href="">
               <svg viewBox="-5 0 21 21"><linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="var(--clr-base-green)" /><stop offset="100%" stop-color="var(--clr-base-blue)"/></linearGradient><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(-385.000000, -7399.000000)"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" fill="url(#gradient)"></path></svg> 
             </a>
 
-            <a href="">
+          <a href="">
               <svg viewBox="0 -1 23 23"><linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="var(--clr-base-green)" /><stop offset="100%" stop-color="var(--clr-base-blue)"/></linearGradient><path d="M14.017 0h-8.07A5.954 5.954 0 0 0 0 5.948v8.07a5.954 5.954 0 0 0 5.948 5.947h8.07a5.954 5.954 0 0 0 5.947-5.948v-8.07A5.954 5.954 0 0 0 14.017 0zm3.94 14.017a3.94 3.94 0 0 1-3.94 3.94h-8.07a3.94 3.94 0 0 1-3.939-3.94v-8.07a3.94 3.94 0 0 1 3.94-3.939h8.07a3.94 3.94 0 0 1 3.939 3.94v8.07z" fill="url(#gradient)"></path><path d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164 5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31 3.155 3.155 0 0 1 0 6.31z" fill="url(#gradient)"></path><circle cx="15.156" cy="4.858" r="1.237" fill="url(#gradient)"></circle></svg>
             </a>
 
-            <a href="">
+          <a href="">
               <svg viewBox="0 -2 21 21"><linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="var(--clr-base-green)" /><stop offset="100%" stop-color="var(--clr-base-blue)"/></linearGradient><g transform="translate(-60.000000, -7521.000000)"><g transform="translate(56.000000, 160.000000)"><path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705" fill="url(#gradient)"></path></svg>
             </a>
-          </div>
-        </div>
-
-        <div class="footer-bottom-text-container">
-          <span id="year"></span>
-          <span>Design and development by Algarve WebCraft</span>
         </div>
       </div>
-    </div>
+
+      <div class="footer-bottom-text-container">
+        <span id="year"></span>
+
+        <div class="footer-privacy-container">
+          <a href="/privacy/">Privacy Policy</a>
+          <span>|</span>
+          <a href="/terms/">Terms of Use</a>
+        </div>
+
+        <span>Design and development by Algarve WebCraft</span>
+      </div>
+    </div> 
+
+    <div class="bottom-glow"></div>
   </div>
 </footer>

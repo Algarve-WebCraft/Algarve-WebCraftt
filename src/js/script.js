@@ -8,16 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   activateHamburgerMenu();
   updateActiveNavLink();
   resetHomeLoadedClass();
-  /* initStickyHeader(); */
-  darkMode();
+  initStickyHeader();
   initLanguageChange();
   updateCopyrightYear();
+  initAccordion();
+  initSpeedColors();
+  gsapSwupAnimations();
+  gsapRocketFlame();
   stopTransitionOnResize();
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   window.addEventListener("load", () => {
-    // Ensure opening animations wait until page has loaded before removing the class to set body opacity: 1.
     document.documentElement.classList.remove("is-loading");
 
     requestAnimationFrame(() => {
@@ -25,17 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Ensure Scroll Triggers wait until everything has fully loaded in.
   window.addEventListener("load", () => {
     setTimeout(() => {
       requestAnimationFrame(() => {
-        gsapScrollAnimations();
+        /* gsapScrollAnimations(); */
         ScrollTrigger.refresh();
       });
     }, 100);
   });
 
-  //Keep commented out while working as page bounces around on every refresh.
   /* document.documentElement.classList.add("has-smooth-scroll"); */
 });
 
@@ -60,10 +60,15 @@ function runSwupHooks() {
     updateActiveNavLink();
     initStickyHeader();
     initLanguageChange();
+    initAccordion();
+    initSpeedColors();
+    gsapRocketFlame();
+    resetColors();
+    updateCopyrightYear();
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    gsapScrollAnimations();
+    /* gsapScrollAnimations(); */
   });
 
   // Prevents the browser from smooth scrolling when changing pages, only happens when still on the same page.
@@ -76,80 +81,79 @@ function runSwupHooks() {
   });
 }
 
-/////////////////////////////////////////////////////////////* Opening hero intro animations *///////////////////////////////////////////////////////////////////////////*
+/////////////////////////////////////////////////////////////* Opening + Swup animations *///////////////////////////////////////////////////////////////////////////*
 
 function gsapOpeningHomeAnimations() {
   const body = document.body;
   const heroHeading = document.querySelector(".cmp-hero-heading");
-
-  // Use isMobile to set different animation timings depending on screen size. Use this in place of timing - `${isMobile.matches ? "-=5.5" : "-=4.2"}`
   const isMobile = window.matchMedia("(max-width: 62.5rem)");
 
   if (!document.body.classList.contains("home")) return;
 
-  // NB!!! Be careful that Swup animations are not conflicting with the opening animations, such as opacity not working properly because of 'fade-in' transition class.
-  // Use onComplete() to add the animation classs back in after that specific animation is finished.
-
   return;
 
-  // Snaps to the top of the screen when the home page is loaded.
   window.addEventListener("load", () => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "auto" });
     }, 0);
   });
 
-  // Prevents the user from being able to scroll while opening animatons are running. Change to 'auto', in an onComplete() during an animation.
-  if (body.classList.contains("home")) {
-    document.documentElement.style.overflow = "hidden";
-  }
-
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
     delay: 0.2,
   });
 
+  gsap.set(".cmp-main-btn--dark-btn", {
+    transition: "none",
+  });
+
   tl.fromTo(
-    ".cmp-hero-section__image",
+    ".cmp-hero-heading",
     {
       clipPath: "inset(0 0 100% 0)",
-      transform: "translateY(-30px)",
     },
     {
       clipPath: "inset(0 0 0% 0)",
-      duration: 1.2,
-      ease: "power3.inOut",
+      duration: 2,
+      ease: "power2.inOut",
     },
   )
-    .to(
-      ".cmp-hero-section__image",
+    .from(
+      ".cmp-main-text",
       {
-        y: 0,
-        scale: 1,
-        duration: 1.2,
-        ease: "power3.inOut",
+        y: -30,
+        opacity: 0,
+        duration: 2,
       },
-      0,
+      "+=0.1",
     )
     .from(
-      ".cmp-hero-heading",
+      ".cmp-topper-heading",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 2,
+      },
+      "-=1.75",
+    )
+    .from(
+      ".hero-btn-container a:first-of-type",
       {
         opacity: 0,
-        x: -150,
-        duration: 1.5,
-        // Use onComplete() after an animation to do anything required afterwards. Allows for more complex changes and state changes not related to animations.
-        onComplete() {
-          const images = document.querySelectorAll(".hero__image-main");
-
-          document.documentElement.style.overflow = "auto";
-
-          images.forEach((image) => {
-            image.classList.add("slide-in-elliptic");
-            gsap.set(".hero__image-main", { clearProps: "all" }); // Use clearProps to ensure no styles remain after the animation is finished (if there is an issue).
-          });
-        },
+        x: -100,
+        duration: 2,
       },
-      "+=0.2",
+      "-=1.5",
+    )
+    .from(
+      ".hero-btn-container a:last-of-type",
+      {
+        opacity: 0,
+        x: 100,
+        duration: 2,
+        clearProps: "all",
+      },
+      "-=2",
     )
     .from(
       ".header",
@@ -158,20 +162,27 @@ function gsapOpeningHomeAnimations() {
         opacity: 0,
         duration: 2,
       },
+      "-=2",
+    )
+    .from(
+      ".hero-image-container",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 2,
+      },
       "-=1",
     )
     .from(
-      ".hero-flex__inner-flex",
+      ".side-glow",
       {
         opacity: 0,
-        y: 100,
         duration: 2,
       },
-      "-=1.75",
+      "-=3",
     );
 }
 
-// Ensures opening animations cannot run if not on the homepage.
 function resetHomeLoadedClass() {
   if (!document.body.classList.contains("home")) {
     document.body.classList.add("loaded");
@@ -179,35 +190,98 @@ function resetHomeLoadedClass() {
   }
 }
 
+function gsapSwupAnimations() {
+  swup.hooks.on("visit:start", () => {
+    return gsap
+      .timeline()
+      .to(
+        ".transition-slide",
+        {
+          y: 30,
+          duration: 0.4,
+          ease: "power2.in",
+        },
+        0,
+      )
+      .to(
+        ".transition-slide",
+        {
+          opacity: 0,
+          duration: 0.2,
+          ease: "power1.out",
+        },
+        0.2,
+      );
+  });
+
+  swup.hooks.on("page:view", () => {
+    gsap
+      .timeline()
+      .fromTo(
+        ".transition-slide",
+        {
+          y: -30,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        0,
+      )
+      .to(
+        ".transition-slide",
+        {
+          opacity: 1,
+          duration: 0.4,
+          ease: "power1.in",
+        },
+        0.1,
+      );
+  });
+}
+
+function gsapRocketFlame() {
+  if (!document.querySelector(".home-rocket-svg")) return;
+
+  gsap.to(".rocket-flame", {
+    keyframes: [
+      { scaleY: 1.015 },
+      { scaleY: 0.99 },
+      { scaleY: 1.01 },
+      { scaleY: 1 },
+    ],
+    duration: 0.2,
+    repeat: -1,
+    ease: "none",
+    transformOrigin: "85% 50%",
+    transformBox: "fill-box",
+  });
+}
+
 ////////////////////////////////////////////////////////////* GSAP scrolling animations *////////////////////////////////////////////////////////////////////////////////*
 
 function gsapScrollAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  return;
-
-  ScrollTrigger.refresh();
+  /* return; */
 
   setTimeout(() => {
     ScrollTrigger.refresh();
-  }, 1000);
+  }, 10);
 
-  ScrollTrigger.defaults({ markers: true }); // Enable markers to show where the scroller starts and ends while planning
+  /*   ScrollTrigger.defaults({ markers: true }); */
 
   const animatedElements = document.querySelectorAll(
     "[data-animate]:not([data-animate-group] [data-animate])",
   );
 
-  /* Add 'data-animate' to the elements you want to animate from the list below ie. data-animate="slide-up". */
-  /* Add 'data-reversible' to the elements you want to reverse the animation when scrolling back up. */
-  /* Add 'data-scrub' to make the elements slowly scrub in with the scroller instead of popping in as the trigger is hit. */
-
-  // Individual scroll animations (each element controlled by its own trigger).
   animatedElements.forEach((el) => {
     const animationType = el.dataset.animate;
     const isReversible = el.hasAttribute("data-reversible");
     const addScrub = el.hasAttribute("data-scrub");
-    let animationStyles = { opacity: 0, duration: 1, ease: "power4.out" };
+    let animationStyles = { opacity: 0, duration: 1, ease: "power3.out" };
 
     switch (animationType) {
       case "slide-up":
@@ -236,58 +310,66 @@ function gsapScrollAnimations() {
         break;
       case "fade-in":
       default:
-        animationStyles = { ...animationStyles, duration: 1 };
+        animationStyles = { ...animationStyles, scale: 0.8, duration: 1 };
         break;
-      case "bg-move": // Unveil from left to right.
-        animProps = {
-          ...animProps,
-          clipPath: "inset(0 100% 0 0)",
-          opacity: 1,
-          duration: 1.5,
-        };
+      case "scale-up":
+        animationStyles = { ...animationStyles, scale: 0.85, duration: 1.5 };
         break;
-      case "scale-up": // Scale down to look like its coming up from within.
-        animProps = { ...animProps, scale: 0.85, duration: 1.5 };
-        break;
-      case "scale-down": // Scale down to look like its arriving on the page.
+      case "scale-down":
         gsap.from(el, {
-          scale: 2,
+          scale: 1.75,
           opacity: 0,
           duration: 1,
-          ease: "power3.out",
+          ease: "power2.out",
           clearProps: "transform, opacity",
           scrollTrigger: {
+            scrub: addScrub ? 5 : false,
+            once: isReversible ? false : true,
             trigger: el,
-            start: "top 0%",
+            start: "top 70%",
           },
         });
         return;
-      case "shutter-horizontal": // Open from horizontal middle outwards, good for images.
+      case "shutter-left":
+        animationStyles = {
+          ...animationStyles,
+          clipPath: "inset(0 100% 0 0)",
+          opacity: 1,
+          duration: 0.85,
+          scrub: addScrub ? 5 : false,
+          once: isReversible ? false : true,
+        };
+        break;
+      case "shutter-horizontal":
         gsap.fromTo(
           el,
           { clipPath: "inset(0 50% 0 50%)" },
           {
             clipPath: "inset(0 0% 0 0%)",
-            duration: 1.25,
-            ease: "power3.out",
+            duration: 0.75,
+            ease: "power1.out",
             clearProps: "transform, opacity",
             scrollTrigger: {
+              scrub: addScrub ? 5 : false,
+              once: isReversible ? false : true,
               trigger: el,
-              start: "top 65%",
+              start: "top 80%",
             },
           },
         );
         return;
-      case "shutter-vertical": // Open from vertical middle outwards.
+      case "shutter-vertical":
         gsap.fromTo(
           el,
           { clipPath: "inset(50% 0 50% 0)" },
           {
             clipPath: "inset(-10% -10% -10% -10%)",
             duration: 2.5,
-            ease: "power3.out",
+            ease: "power2.out",
             clearProps: "transform, opacity",
             scrollTrigger: {
+              scrub: addScrub ? 5 : false,
+              once: isReversible ? false : true,
               trigger: el,
               start: "top 75%",
             },
@@ -296,15 +378,14 @@ function gsapScrollAnimations() {
         return;
     }
 
-    // Generic function handles the default 'from' animations if they are not specified in the switch above.
     gsap.from(el, {
       ...animationStyles,
       clearProps: "transform, opacity",
       scrollTrigger: {
         trigger: el,
-        start: "top 50%",
+        start: "top 75%",
         end: "top 45%",
-        scrub: addScrub ? 5 : false, // Change number to increase or decrease the speed of the scrub when added.
+        scrub: addScrub ? 5 : false,
         once: isReversible ? false : true,
         toggleActions: isReversible
           ? "play none none reverse"
@@ -313,14 +394,13 @@ function gsapScrollAnimations() {
     });
   });
 
-  // Group scroll animations (multiple elements controlled by a single trigger).
   document.querySelectorAll("[data-animate-group]").forEach((group) => {
-    // Add 'data-animate-start="top 60%"' to the html element next to 'data-animate-group' to set whatever specific start point for that group, defaults to "top 40%".
-    const triggerStartPoint = group.dataset.animateStart || "top 40%";
+    const triggerStartPoint = group.dataset.animateStart || "top 70%";
+    const hasStagger = group.dataset.animateStagger || "0";
 
     group.querySelectorAll("[data-animate]").forEach((el) => {
       const animationType = el.dataset.animate;
-      let animationStyles = { opacity: 0, ease: "power4.out" };
+      let animationStyles = { opacity: 0, ease: "power3.out" };
 
       switch (animationType) {
         case "slide-left":
@@ -337,7 +417,6 @@ function gsapScrollAnimations() {
           break;
       }
 
-      // 'set' ensures the beginning styles are applied straight away so they can be animated to. Required to make group animations work as just 'from' does not work.
       gsap.set(el, animationStyles);
     });
 
@@ -349,23 +428,18 @@ function gsapScrollAnimations() {
       },
     });
 
-    group.querySelectorAll("[data-animate]").forEach((el) => {
-      tl.to(
-        el,
-        {
-          x: 0,
-          y: 0,
-          opacity: 1,
-          ease: "power4.out",
-          duration: 1,
-        },
-        0,
-      );
+    tl.to(group.querySelectorAll("[data-animate]"), {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      ease: "power1.out",
+      duration: 0.5,
+      stagger: hasStagger,
     });
   });
 }
 
-////////////////////////////////////////////////////////* Speed section langauge change *///////////////////////////////////////////////////////////////////////////////*
+////////////////////////////////////////////////////////* Speed section langauge + colour change *///////////////////////////////////////////////////////////////////////////////*
 
 function initLanguageChange() {
   const text = document.querySelectorAll(".language-card-text-container span");
@@ -390,9 +464,112 @@ function initLanguageChange() {
   });
 }
 
-//////////////////////////////////////////////////////////////////* Testimonial Carousel */////////////////////////////////////////////////////////////////////////////*
+function initSpeedColors() {
+  document.querySelectorAll("[data-theme-button]").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const theme = button.dataset.themeButton;
 
-//////////////////////////////////////////////////////////* Our services page heading underline draw *//////////////////////////////////////////////////////////////////*
+      if (theme === document.documentElement.dataset.theme) return;
+
+      const applyTheme = () => {
+        document.documentElement.dataset.theme = theme;
+      };
+
+      if (!document.startViewTransition) {
+        applyTheme();
+        return;
+      }
+
+      document.startViewTransition(applyTheme);
+    });
+  });
+}
+
+function resetColors() {
+  document.documentElement.dataset.theme = "ocean";
+}
+
+//////////////////////////////////////////////////////////////////* FAQ accordion */////////////////////////////////////////////////////////////////////////////*
+
+function initAccordion() {
+  let currentOpenItem =
+    null; /* No open item by default but checks when one is clicked and then it becomes that specific 'item' */
+
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const button = item.querySelector("button");
+    const answer = item.querySelector(".faq-item__answer");
+    const icon = item.querySelector("svg");
+
+    button.addEventListener("click", () => {
+      if (currentOpenItem && currentOpenItem !== item) {
+        gsap.to(currentOpenItem.querySelector(".faq-item__answer"), {
+          height: 0,
+          duration: 0.75,
+          ease: "power3.inOut",
+        });
+
+        gsap.to(currentOpenItem.querySelector("button"), {
+          color: "var(--clr-white-20)",
+          duration: 0.75,
+          ease: "power3.inOut",
+        });
+
+        gsap.to(currentOpenItem.querySelector("svg"), {
+          rotate: 45,
+          stroke: "#f5f6f8",
+          duration: 0.75,
+          ease: "power3.inOut",
+        });
+
+        currentOpenItem = null;
+      }
+
+      if (answer.offsetHeight > 0) {
+        gsap.to(answer, {
+          height: 0,
+          duration: 0.5,
+          ease: "power3.inOut",
+        });
+
+        gsap.to(button, {
+          color: "var(--clr-white-20)",
+          duration: 0.35,
+          ease: "power3.inOut",
+        });
+
+        gsap.to(icon, {
+          rotate: 45,
+          stroke: "#f5f6f8",
+          duration: 0.4,
+          ease: "power3.inOut",
+        });
+
+        currentOpenItem = null;
+      } else {
+        gsap.to(answer, {
+          height: "auto",
+          duration: 0.75,
+          ease: "power2.inOut",
+        });
+
+        gsap.to(button, {
+          color: "#48d1e0",
+          duration: 0.75,
+          ease: "power2.inOut",
+        });
+
+        gsap.to(icon, {
+          rotate: 180,
+          stroke: "#48d1e0",
+          duration: 0.75,
+          ease: "power2.inOut",
+        });
+
+        currentOpenItem = item;
+      }
+    });
+  });
+}
 
 ////////////////////////////////////////////////////* Hamburger menu and Navigation accessibility attributes */////////////////////////////////////////////////////////*
 
@@ -514,75 +691,6 @@ function initStickyHeader() {
       header.classList.remove("sticking");
       closeMenuSafely();
     }
-  });
-}
-
-/////////////////////////////////////////////////////////////////* Dark-mode change */////////////////////////////////////////////////////////////////////////////////*
-
-function darkMode() {
-  const darkModeButton = document.getElementById("dark-mode-toggle");
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-  function applyDarkMode() {
-    document.documentElement.classList.add("dark-mode");
-  }
-
-  function applyLightMode() {
-    document.documentElement.classList.remove("dark-mode");
-  }
-
-  function enableDarkMode() {
-    applyDarkMode();
-    localStorage.setItem("theme", "dark");
-  }
-
-  function disableDarkMode() {
-    applyLightMode();
-    localStorage.setItem("theme", "light");
-  }
-
-  function detectColorScheme() {
-    const storedTheme = localStorage.getItem("theme");
-
-    if (storedTheme) {
-      storedTheme === "dark" ? applyDarkMode() : applyLightMode();
-      return;
-    }
-
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    prefersDark ? applyDarkMode() : applyLightMode();
-  }
-
-  detectColorScheme();
-
-  function switchTheme(newTheme) {
-    newTheme === "dark" ? enableDarkMode() : disableDarkMode();
-  }
-
-  mediaQuery.addEventListener("change", (e) => {
-    if (!localStorage.getItem("theme")) {
-      e.matches ? applyDarkMode() : applyLightMode();
-    }
-  });
-
-  darkModeButton.addEventListener("click", () => {
-    const isPressed = darkModeButton.getAttribute("aria-pressed") === "true";
-    darkModeButton.setAttribute("aria-pressed", String(!isPressed));
-
-    const currentTheme = localStorage.getItem("theme") || "light";
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-
-    if (!document.startViewTransition) {
-      switchTheme(newTheme);
-      return;
-    }
-
-    document.startViewTransition(() => {
-      switchTheme(newTheme);
-    });
   });
 }
 

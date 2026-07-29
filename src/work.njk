@@ -1,13 +1,14 @@
 ---
-title: 'Page Title'
-description: 'Page Description'
+title: 'Recent Work | Algarve WebCraft'
+description: 'Explore recent websites built by Algarve Webcraft and see how our hand-coded, high-performance websites help local businesses grow online.'
+footer_text: "Let's build the website your business"
+footer_span: 'deserves.' 
 ---
 
 {% extends "base.njk" %}
-
 {% block content %}
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 4 / SECTION-ONE / SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 4 / SECTION-ONE / HERO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <section class="cmp-hero-section" aria-labelledby="hero-section">
@@ -16,19 +17,72 @@ description: 'Page Description'
     <div class="cmp-header-text-container cmp-header-text-container--pg1-hero">
       <span class="cmp-topper-heading">RECENT WORK</span>
       <h1 id="hero-section" class="cmp-hero-heading">Sites that make small businesses <br><span class="cmp-heading-span cmp-heading-span--hero cmp-gradient-text">look serious.</span></h1>
-      <p class="cmp-main-text">Every project hand-coded, fast, and still being looked after. A small selection of what we've shipped.</p>
+      <p class="cmp-main-text">Every website is thoughtfully designed and hand-coded with performance, usability and long-term growth in mind, helping customers feel confident from the very first click.</p>
     </div>
 
   </div>
 </section>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 4 / SECTION-TWO / SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 4 / SECTION-TWO / WORK ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-<section class="" aria-labelledby="">
-  <div class="wrapper wrapper--mobile-m">
+<section class="cmp-main-section cmp-main-section--no-top" aria-labelledby="">
+  <div class="wrapper wrapper--mobile-38">
 
+    <div class="work-section-container">
+      <div class="work-card" data-animate="shutter-horizontal">
+        <a href="/work/the-garden/" alt="">
+          <img src="/assets/images/the-garden.webp" alt="">
+        
+
+          <div class="work-card__text">
+            <span class="cmp-topper-heading">Restaurant</span>
+            <h2>The Garden Bar & Grill</h2>
+            <p>Restaurant based in Lagos.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-card" data-animate="shutter-horizontal">
+        <a href="/work/bueni/" alt="">
+          <img src="/assets/images/bueni-screenshot.webp" alt="">
+        
+
+          <div class="work-card__text">
+            <span class="cmp-topper-heading">Restaurant</span>
+            <h2>Bueni</h2>
+            <p>Restaurant based in Lagos.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-card" data-animate="shutter-horizontal">
+        <a href="/work/hudson/" alt="">
+          <img src="/assets/images/designer-portfolio.webp" alt="">
+        
+
+          <div class="work-card__text">
+            <span class="cmp-topper-heading">Freelancer</span>
+            <h2>Hudson Designer profile</h2>
+            <p>Freelancer portfolio</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-card" data-animate="shutter-horizontal">
+        <a href="/work/algarve-webcraft/" alt="">
+          <img src="/assets/images/webcraft-screenshot.webp" alt="">
+        
+
+          <div class="work-card__text">
+            <span class="cmp-topper-heading">Software</span>
+            <h2>Algarve Webcraft</h2>
+            <p>Software company based in Lagos.</p>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

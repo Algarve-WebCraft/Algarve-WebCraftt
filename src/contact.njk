@@ -1,13 +1,14 @@
 ---
-title: 'Page Title'
-description: 'Page Description'
+title: 'Contact | Algarve WebCraft'
+description: 'Get in touch with Algarve Webcraft to discuss your new website. We would love to learn about your business and answer any questions.'
+footer_text: "Let's build the website your business"
+footer_span: 'deserves.'
 ---
 
 {% extends "base.njk" %}
-
 {% block content %}
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 5 / SECTION-ONE / SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 5 / SECTION-ONE / HERO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <section class="cmp-hero-section" aria-labelledby="hero-section">
@@ -16,19 +17,92 @@ description: 'Page Description'
     <div class="cmp-header-text-container cmp-header-text-container--pg1-hero">
       <span class="cmp-topper-heading">CONTACT</span>
       <h1 id="hero-section" class="cmp-hero-heading">Let's build something <br><span class="cmp-heading-span cmp-heading-span--hero cmp-gradient-text">worth visiting.</span></h1>
-      <p class="cmp-main-text">Tell us a little about your business and what you need. It's a 20-minute call, zero commitment, and you'll get a clear answer on cost and timeline.</p>
+      <p class="cmp-main-text">Tell me a little about your business and what you are looking for in your website. I'll review your enquiry and get back to you soon. No obligation. No pressure.</p>
     </div>
 
   </div>
 </section>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 5 / SECTION-TWO / SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE 5 / SECTION-TWO / CONTACT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-<section class="" aria-labelledby="">
-  <div class="wrapper wrapper--mobile-m">
+<section class="cmp-main-section cmp-main-section--no-top" aria-labelledby="contact-section">
+  <div class="wrapper wrapper--mobile-32">
 
+    <div class="contact-container">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-animate="slide-up">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <p hidden>
+          <label>
+            Don't fill this out:
+            <input name="bot-field">
+          </label>
+        </p>
+
+        <h2 id="contact-section">Start your project</h2>
+
+        <div class="form-group">
+          <label for="name">YOUR NAME *</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="John Smith" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-MAIL *</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="johnsmith@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="business">BUSINESS NAME *</label>
+          <input type="text" id="business" name="business" autocomplete="organization" placeholder="John Smith and co." required />
+        </div>
+
+        <div class="form-group">
+          <label for="website">CURRENT WEBSITE (OPTIONAL)</label>
+          <input type="url" id="website" name="website" placeholder="yourwebsite.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">TELL ME ABOUT YOUR PROJECT *</label>
+          <textarea id="message" name="message" rows="6" placeholder="A few lines about your business and what you are hoping the website will do." required></textarea>
+        </div>
+
+        <button class="cmp-main-btn" type="submit"><svg class="btn-svg-one" viewBox="0 0 20.633 20.633">
+            <path d="M5.015,10.79l9.646,9.646c0.13,0.133,0.302,0.197,0.471,0.197c0.173,0,0.344-0.064,0.473-0.197l0.013-0.011 c0.127-0.12,0.198-0.293,0.198-0.473v-4.68c0-0.182-0.07-0.347-0.198-0.475l-4.479-4.477l4.479-4.483 c0.127-0.123,0.198-0.294,0.198-0.473V0.682c0-0.176-0.07-0.345-0.198-0.474l-0.013-0.012C15.483,0.071,15.313,0,15.132,0 c-0.173,0-0.346,0.071-0.471,0.196L5.015,9.845C4.75,10.104,4.75,10.532,5.015,10.79z"></path>
+          </svg> Send Enquiry <svg class="btn-svg-two" viewBox="0 0 20.633 20.633">
+            <path d="M5.015,10.79l9.646,9.646c0.13,0.133,0.302,0.197,0.471,0.197c0.173,0,0.344-0.064,0.473-0.197l0.013-0.011 c0.127-0.12,0.198-0.293,0.198-0.473v-4.68c0-0.182-0.07-0.347-0.198-0.475l-4.479-4.477l4.479-4.483 c0.127-0.123,0.198-0.294,0.198-0.473V0.682c0-0.176-0.07-0.345-0.198-0.474l-0.013-0.012C15.483,0.071,15.313,0,15.132,0 c-0.173,0-0.346,0.071-0.471,0.196L5.015,9.845C4.75,10.104,4.75,10.532,5.015,10.79z"></path>
+          </svg></button>
+      </form>
+
+      <div class="info-container" data-animate-group data-animate-stagger="0.3">
+        <a href="mailto:algarvewebcraft@gmail.com">
+          <div class="info-container__item" data-animate="slide-left">
+            <span class="cmp-topper-heading">E-MAIL</span>
+            <h3>Algarvewebcraft@gmail.com</h3>
+            <p>The fastest way to reach us. I read every message and will reply within 24 hours.</p>
+          </div>
+        </a>
+
+        <div class="info-container__item" data-animate="slide-left">
+          <span class="cmp-topper-heading">WHATSAPP</span>
+          <h3>(+351) 911 891 019</h3>
+          <p>Have a question before getting started? Send a message on WhatsApp instead.</p>
+        </div>
+
+        <div class="info-container__item" data-animate="slide-left">
+          <span class="cmp-topper-heading">WHERE WE ARE</span>
+          <h3>Lagos, Algarve, Portugal</h3>
+          <p>Based on Portugal's beautiful south coast, working with small businesses across Europe.</p>
+        </div>
+
+        <div class="info-container__item" data-animate="slide-left">
+          <span class="cmp-topper-heading">RESPONSE TIME</span>
+          <h3>Replies within 24h</h3>
+          <p>You will always hear back from the person who will design and build your website. No ticket queues. No middlemen.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}
