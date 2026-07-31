@@ -630,9 +630,6 @@
 
       &.sticking {
         position: sticky;
-        will-change: transform;
-        backface-visibility: hidden;
-        transform: translateZ(0);
         background-color: var(--clr-black-10);
         border-color: #f5f6f812;
         animation: slideDown 1.2s ease-out forwards;
