@@ -617,48 +617,6 @@
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 
-  .swup-header {
-    display: contents;
-  }
-
-  .wrapper--header {
-    min-height: clamp(4.5rem, 11vw, 5.25rem);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .business-logo-container {
-    max-width: clamp(6rem, 9vw + 2rem, 8.5rem);
-  }
-
-  .business-logo {
-    width: 100%;
-    transition: transform 2s;
-
-    @media (width > 47.5rem) {
-      transition: transform 2s;
-    }
-  }
-
-  .cmp-main-btn--header-btn {
-    display: none;
-
-    @media (width > 62.5rem) {
-      display: flex;
-      font-size: 0.875rem;
-      padding-inline: 2.625rem;
-      padding-block: 0.85rem;
-    }
-  }
-
-  .hamburger-btn-box {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    order: 1;
-  }
-
   .hamburger-btn {
     width: 1.85rem;
     height: 1.5rem;
