@@ -617,7 +617,7 @@
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
   .header {
-    position: sticky;
+    /* position: sticky; */
     top: -0.5px;
     z-index: 1000;
 
@@ -629,7 +629,7 @@
         box-shadow 0.35s ease;
 
       &.sticking {
-        position: sticky;
+        /*  position: sticky; */
         background-color: var(--clr-black-10);
         border-color: #f5f6f812;
         animation: slideDown 1.2s ease-out forwards;
@@ -669,9 +669,9 @@
 
   .wrapper--header {
     min-height: clamp(4.5rem, 11vw, 5.25rem);
-    /* display: flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center; */
+    align-items: center;
   }
 
   .business-logo-container {
