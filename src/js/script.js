@@ -3,6 +3,7 @@ import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.time("init");
   runSwupHooks();
   activateHamburgerMenu();
   updateActiveNavLink();
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, 100);
   });
+  console.timeEnd("init");
 
   /* document.documentElement.classList.add("has-smooth-scroll"); */
 });
@@ -690,14 +692,9 @@ function initStickyHeader() {
 
     if (isScrolled && !headerWasSticking) {
       header.classList.add("sticking");
-
-      requestAnimationFrame(() => {
-        header.classList.add("slide-down");
-      });
       closeMenuSafely();
     } else if (window.scrollY < 5 && headerWasSticking) {
       header.classList.remove("sticking");
-      header.classList.remove("slide-down");
       closeMenuSafely();
     }
   });
