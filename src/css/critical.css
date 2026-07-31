@@ -669,13 +669,9 @@
 
   .wrapper--header {
     min-height: clamp(4.5rem, 11vw, 5.25rem);
-    display: grid;
-    place-content: center;
-    grid-template-columns: 1fr 1fr;
-
-    @media (width > 47.5rem) {
-      grid-template-columns: 1fr 2fr 1fr 0.1fr;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .business-logo-container {
@@ -707,7 +703,6 @@
     align-items: center;
     gap: 1.2rem;
     order: 1;
-    place-self: end;
   }
 
   .hamburger-btn {
@@ -729,12 +724,6 @@
     transition: transform 1.2s;
     /* prettier-ignore */
     transition-timing-function: linear(0, -0.001 6.9%, -0.004 9.1%, -0.008 11%, -0.016 12.9%, -0.025 14.6%, -0.038 16.3%, -0.054 17.9%, -0.073 19.5%, -0.095 21%, -0.152 24.1%, -0.217 27%, -0.358 32.6%, -0.408 35%, -0.428 36.3%, -0.439 37.5%, -0.441 38.6%, -0.436 39.6%, -0.423 40.5%, -0.405 41.3%, -0.35 42.8%, -0.27 44.2%, -0.156 45.6%, -0.014 46.9%, 0.153 48.1%, 0.766 51.4%, 1.05 53.4%, 1.184 54.7%, 1.284 56%, 1.359 57.4%, 1.39 58.2%, 1.413 59%, 1.434 60.2%, 1.439 60.8%, 1.441 61.5%, 1.44 62.2%, 1.436 62.9%, 1.418 64.4%, 1.395 65.7%, 1.365 67.1%, 1.212 73.2%, 1.146 76.2%, 1.089 79.4%, 1.067 81%, 1.047 82.7%, 1.034 84.2%, 1.023 85.8%, 1.014 87.5%, 1.008 89.3%, 1.004 91.2%, 1.001 93.3%, 1);
-
-    @media (width > 47.5rem) {
-      & {
-        display: none;
-      }
-    }
 
     span {
       display: block;
@@ -767,6 +756,12 @@
     &:focus-visible span {
       background: #fff;
     }
+
+    @media (width > 47.5rem) {
+      & {
+        display: none;
+      }
+    }
   }
 
   .nav-bar {
@@ -775,6 +770,7 @@
     font-size: var(--fs-nav-text);
     font-family: var(--ff-geist-mono);
     font-weight: var(--fw-regular);
+    top: 100%;
     right: 0;
     left: 0;
     width: 18em;
