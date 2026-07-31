@@ -554,25 +554,6 @@
 
   /* For speed section color change */
 
-  html[data-theme="ocean"] {
-    --clr-base-green: oklch(79.38% 0.11696 205.623);
-    --clr-base-blue: oklch(57.507% 0.17923 290.184);
-  }
-
-  html[data-theme="forest"] {
-    --clr-base-green: oklch(86% 0.19 160);
-    --clr-base-blue: oklch(45% 0.18 145);
-  }
-
-  html[data-theme="sunset"] {
-    --clr-base-green: oklch(88% 0.19 75);
-    --clr-base-blue: oklch(55% 0.22 15);
-  }
-
-  html[data-theme="ruby"] {
-    --clr-base-green: oklch(84% 0.22 335);
-    --clr-base-blue: oklch(48% 0.21 20);
-  }
 
   html,
   body {
@@ -591,10 +572,7 @@
     color: var(--clr-white-20);
     line-height: var(--lh-155);
     letter-spacing: var(--ls-t-005);
-
-    @media (width > 47.5rem) {
-      overflow: clip;
-    }
+    overflow: clip;
 
     > * {
       min-width: 0;
