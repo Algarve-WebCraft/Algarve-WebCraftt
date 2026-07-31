@@ -4,7 +4,7 @@ import SwupHeadPlugin from "@swup/head-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
   runSwupHooks();
-  activateHamburgerMenu();
+  /* activateHamburgerMenu(); */
   /* updateActiveNavLink();
   resetHomeLoadedClass();
   initStickyHeader();
