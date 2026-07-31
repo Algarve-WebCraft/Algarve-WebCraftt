@@ -92,15 +92,15 @@ function gsapOpeningHomeAnimations() {
   const heroHeading = document.querySelector(".cmp-hero-heading");
   const isMobile = window.matchMedia("(max-width: 62.5rem)");
 
+  if (!document.body.classList.contains("home")) return;
   
-
   /* return; */
 
-  window.addEventListener("load", () => {
+  /* window.addEventListener("load", () => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "auto" });
     }, 0);
-  });
+  }); */
 
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
@@ -159,7 +159,7 @@ function gsapOpeningHomeAnimations() {
       },
       "-=2",
     )
-    .from(
+    /* .from(
       ".header",
       {
         y: -30,
@@ -167,7 +167,7 @@ function gsapOpeningHomeAnimations() {
         duration: 2,
       },
       "-=2",
-    )
+    ) */
     .from(
       ".hero-image-container",
       {
