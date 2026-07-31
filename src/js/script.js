@@ -5,16 +5,16 @@ import SwupHeadPlugin from "@swup/head-plugin";
 document.addEventListener("DOMContentLoaded", () => {
   runSwupHooks();
   activateHamburgerMenu();
-  updateActiveNavLink();
+  /* updateActiveNavLink();
   resetHomeLoadedClass();
   initStickyHeader();
   initLanguageChange();
   updateCopyrightYear();
   initAccordion();
-  initSpeedColors();
+  initSpeedColors(); */
   /* gsapSwupAnimations(); */
-  gsapRocketFlame();
-  stopTransitionOnResize();
+  /* gsapRocketFlame();
+  stopTransitionOnResize(); */
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 

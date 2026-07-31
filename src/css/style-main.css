@@ -1060,6 +1060,7 @@
         margin-top: var(--sp-16);
         margin-bottom: 0.5rem;
         background: none;
+        margin-inline: auto;
 
         @media (width > 47.5rem) {
           margin-top: var(--sp-32);
@@ -1164,6 +1165,7 @@
     a {
       margin-top: var(--sp-16);
       margin-bottom: 0.5rem;
+      margin-inline: auto;
 
       @media (width > 47.5rem) {
         margin-top: var(--sp-32);
