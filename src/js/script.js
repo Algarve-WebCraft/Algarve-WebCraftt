@@ -2,13 +2,12 @@
 import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
 
-// Load all functions in as the DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   runSwupHooks();
   activateHamburgerMenu();
   updateActiveNavLink();
   resetHomeLoadedClass();
-  /* initStickyHeader(); */
+  initStickyHeader();
   initLanguageChange();
   updateCopyrightYear();
   initAccordion();
@@ -58,7 +57,7 @@ function runSwupHooks() {
   swup.hooks.on("page:view", () => {
     activateHamburgerMenu();
     updateActiveNavLink();
-    /* initStickyHeader(); */
+    initStickyHeader();
     initLanguageChange();
     initAccordion();
     initSpeedColors();
@@ -66,15 +65,10 @@ function runSwupHooks() {
     resetColors();
     updateCopyrightYear();
 
-    /* document.querySelectorAll("video").forEach((video) => {
-      video.load();
+    const footerVideo = document.querySelector(".footer-video-container video");
 
-      const playPromise = video.play();
-
-      if (playPromise !== undefined) {
-        playPromise.catch((err) => console.log(err));
-      }
-    }); */
+    footerVideo?.load();
+    footerVideo?.play().catch(() => {});
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -100,7 +94,7 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  return;
+  /* return; */
 
   window.addEventListener("load", () => {
     setTimeout(() => {
@@ -679,7 +673,7 @@ function updateActiveNavLink() {
 
 ///////////////////////////////////////////////////////////////* Sticky navigation bar *//////////////////////////////////////////////////////////////////////////////*
 
-/* function initStickyHeader() {
+function initStickyHeader() {
   const hamburgerBtn = document.querySelector(".hamburger-btn");
   const navBar = document.querySelector(".nav-bar");
 
@@ -707,7 +701,7 @@ function updateActiveNavLink() {
       closeMenuSafely();
     }
   });
-} */
+}
 
 //////////////////////////////////////////////////////////////* Footer copyright-year update *////////////////////////////////////////////////////////////////////////*
 
