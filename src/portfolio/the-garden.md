@@ -14,11 +14,11 @@ hero_text: Fourteen years of great food, great memories and yet no website. We c
 hero_text_inner: The Garden
 
 span_block_1: Digital Menu
-span_block_2: Gallery Section
+span_block_2: Photo Gallery
 span_block_3: Highly Animated
-span_block_4: First Official Website
+span_block_4: First Website
 
-hero_image_image: /assets/images/Screenshot 2026-07-20 184903.png
+hero_image_image: /assets/images/the-garden-home.webp
 hero_image_link: https://www.thegardenlagos.pt
 hero_image_alt: The Garden restaurant
 
@@ -41,8 +41,8 @@ result_tick_2: An extensive photo gallery highlighting the restaurant, its story
 result_tick_3: Google maps and contact information to make planning a visit effortless.
 result_tick_4: A fast, modern website that gives The Garden an online presence to match its reputation.
 
-previous_project_text: Algarve WebCraft
-previous_project_link: algarve-webcraft
+previous_project_text: Hudson designs
+previous_project_link: hudson
 
 next_project_text: Bueni
 next_project_link: bueni

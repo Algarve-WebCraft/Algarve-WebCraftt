@@ -551,6 +551,11 @@
       }
 
       .cmp-card:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2;
+      }
+
+      .cmp-card:nth-child(5) {
         grid-column: 3 / 4;
         grid-row: 2;
 
@@ -565,7 +570,7 @@
         }
       }
 
-      .cmp-card:nth-child(5) {
+      .cmp-card:nth-child(6) {
         grid-column: 1 / -1;
         grid-row: 3;
         background-image:
@@ -651,11 +656,6 @@
           display: none;
         }
       }
-
-      .cmp-card:nth-child(6) {
-        grid-column: 2 / 3;
-        grid-row: 2;
-      }
     }
 
     .cmp-card:nth-child(1) {
@@ -680,18 +680,12 @@
       }
     }
 
-    .cmp-card:nth-child(5) {
-      span,
-      button {
-        display: none;
-      }
-    }
-
-    .cmp-card:nth-child(6) {
+    .cmp-card:nth-child(4) {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 1rem;
+      order: 6;
 
       .card-btn-container {
         display: grid;
@@ -769,6 +763,13 @@
             );
           }
         }
+      }
+    }
+
+    .cmp-card:nth-child(6) {
+      span,
+      button {
+        display: none;
       }
     }
 

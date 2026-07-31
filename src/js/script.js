@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     setTimeout(() => {
       requestAnimationFrame(() => {
-        /* gsapScrollAnimations(); */
+        gsapScrollAnimations();
         ScrollTrigger.refresh();
       });
     }, 100);
@@ -68,7 +68,7 @@ function runSwupHooks() {
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    /* gsapScrollAnimations(); */
+    gsapScrollAnimations();
   });
 
   // Prevents the browser from smooth scrolling when changing pages, only happens when still on the same page.
@@ -90,7 +90,7 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  return;
+  /* return; */
 
   window.addEventListener("load", () => {
     setTimeout(() => {
@@ -509,7 +509,7 @@ function initAccordion() {
         });
 
         gsap.to(currentOpenItem.querySelector("button"), {
-          color: "var(--clr-white-20)",
+          color: "#f5f6f8",
           duration: 0.75,
           ease: "power3.inOut",
         });
@@ -532,7 +532,7 @@ function initAccordion() {
         });
 
         gsap.to(button, {
-          color: "var(--clr-white-20)",
+          color: "#f5f6f8",
           duration: 0.35,
           ease: "power3.inOut",
         });

@@ -3,46 +3,47 @@ layout: portfolio-template.njk
 
 title: "Algarve WebCraft website | Algarve WebCraft"
 description: "Website created by Algarve WebCraft for itself"
-footer_text: 'Want results like'
-footer_span: "Tayler's?" 
+footer_text: "Want results like"
+footer_span: "Tayler's?"
 permalink: "/work/algarve-webcraft/"
 
 topper_heading: SOFTWARE
 hero_title: Algarve
 hero_span: WebCraft
-hero_text: Local Lagos website developer.
+hero_text: A complete redesign that transformed Algarve WebCraft from a traditional web agency into a modern, personal service built around trust, craftsmanship and long-term partnerships.
+hero_text_inner: Algarve WebCraft
 
-span_block_1: 14-day build
-span_block_2: Animated
-span_block_3: 100 Lighthouse Score
-span_block_4: First website
+span_block_1: Full Redesign
+span_block_2: Brand Refresh
+span_block_3: Case Studies
+span_block_4: Portfolio
 
-hero_image_image: /assets/images/webcraft-screenshot.webp
+hero_image_image: /assets/images/algarve-home.webp
 hero_image_link: https://algarvewebcraft.com
 hero_image_alt: Algarve WebCraft website developer
 
-challenge_text: The Garden had a loyal local following and genuinely great food. But its website — a five-year-old template build — took eight seconds to load on a phone, didn't show the menu properly, and had no way to book a table online. Customers were giving up before they ever saw the place. <br><br> The owner, Kevin, had been quoted €4,000 by an agency for a rebuild, plus a monthly maintenance retainer. He nearly didn't bother.
+challenge_text: As Algarve WebCraft grew, the original website no longer reflected the quality of the work or the experience clients could expect. The design felt dated, the messaging focused too heavily on features rather than people and it didn't clearly communicate what makes the business different. The goal was not simply to redesign the website. It was to completely rethink how the business presents itself online and create an experience that feels as personal as the service itself.
 
-approach_text: "We started with a 20-minute call to understand the restaurant: who eats there, what they order, when they book. Then we designed and hand-coded a new site from scratch — no template, no page builder. <br><br> The owner, Kevin, had been quoted €4,000 by an agency for a rebuild, plus a monthly maintenance retainer. He nearly didn't bother."
-approach_tick_1: Mobile-first design, because 80% of restaurant searches happen on a phone.
-approach_tick_2: A menu that loads instantly and updates in seconds when dishes change.
-approach_tick_3: Online booking integrated directly, no third-party redirect.
-approach_tick_4: Three languages — Portuguese, English, and German — for the Algarve's mixed clientele.
+approach_text: Rather than updating the existing design, the website was rebuilt from the ground up with a completely new visual identity and user experience. Every page was redesigned to focus on storytelling, trust and clarity, helping visitors understand exactly what it's like to work with Algarve WebCraft. Every interaction, animation and layout was carefully considered to demonstrate the same attention to detail that goes into every client project.
+approach_tick_1: A complete visual redesign with a modern, premium aesthetic.
+approach_tick_2: Fully rewritten content focused on people rather than technical features.
+approach_tick_3: Interactive case studies showcasing recent client work.
+approach_tick_4: Subtle animations and transitions that add personality without distracting from the content.
 
-testimonial_text: They rebuilt our entire site in 11 days. It loads instantly on a phone — we tested it. Three customers told us last month the website is what made them book the table.
-testimonial_span: Kevin Lortan · Owner, The Garden Bar & Grill
+testimonial_text: The new website finally reflects the quality of work and personal service Algarve WebCraft is built around.
+testimonial_span: Tayler Batista · Owner, Algarve WebCraft
 
-built_text: "A fast, warm, hand-coded site that feels like the restaurant: relaxed but serious about the details. Every page loads in under a second. The menu is a single source of truth that Kevin can ask us to update any time — usually done the same day. <br><br> Hosting, SSL, backups, and the domain are all managed by us. Kevin never sees a dashboard. When he wants a change, he texts."
+built_text: A modern portfolio and business website that acts as both a showcase and a demonstration of the standards clients can expect. Every page was designed to feel polished, approachable and carefully crafted, balancing premium design with clear, straightforward messaging. The website combines detailed case studies, transparent pricing, thoughtful animations and interactive elements to create an experience that feels memorable without becoming overwhelming.
 
-result_text: In the first month after launch, online bookings rose 38%. The site scores a perfect 100 across Google's Lighthouse audit. And Kevin pays €85/month — everything included — instead of the €4,000 upfront he was quoted.
-result_tick_1: Sub-second load times on 4G, verified on real devices.
-result_tick_2: "100/100 Lighthouse: performance, accessibility, best practices, SEO."
-result_tick_3: Zero downtime since launch.
-result_tick_4: Same-day edits whenever the menu changes.
+result_text: "The redesigned website presents Algarve WebCraft exactly as intended: a modern web development business built around personal service, handcrafted websites and long-term client relationships."
+result_tick_1: A complete brand refresh that gives the business a stronger and more memorable identity.
+result_tick_2: Interactive case studies that showcase real projects and the thinking behind each one.
+result_tick_3: Clear and transparent pricing that makes choosing the right plan simple and straightforward.
+result_tick_4: A polished user experience demonstrating the same craftsmanship and attention to detail clients receive in every project.
 
-previous_project_text: Hudson Design
-previous_project_link: hudson
+previous_project_text: Bueni
+previous_project_link: bueni
 
-next_project_text: The Garden
-next_project_link: the-garden
+next_project_text: Hudson Design
+next_project_link: hudson
 ---

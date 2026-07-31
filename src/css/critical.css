@@ -290,8 +290,8 @@
 
     /* Colour */
 
-    --clr-base-green: oklch(79.38% 0.11696 205.623);
-    --clr-base-blue: oklch(57.507% 0.17923 290.184);
+    --clr-base-green: rgb(72, 209, 224);
+    --clr-base-blue: rgb(123, 95, 217);
     --clr-black-10: oklch(15.038% 0.00877 274.27);
     --clr-black-20: oklch(16.672% 0.04116 244.056);
     --clr-black-30: oklch(19.189% 0.01259 270.692);
@@ -408,6 +408,7 @@
   }
 
   .cmp-topper-heading {
+    position: relative;
     display: inline-block;
     font-size: var(--fs-va-topper-heading);
     font-weight: var(--fw-medium);
@@ -619,23 +620,44 @@
   .header {
     position: relative;
     top: -0.5px;
-    border: 1px solid #f5f6f812;
     z-index: 1000;
+    transition:
+      background-color 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
 
     &.sticking {
       position: sticky;
       animation: slideDown 1.2s ease-out forwards;
+      background-color: var(--clr-black-10);
+      border-color: #f5f6f812;
+      box-shadow:
+        0 1px 1px rgba(255, 255, 255, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.2),
+        0 12px 32px rgba(0, 0, 0, 0.18),
+        0 24px 64px rgba(81, 81, 81, 0.168);
     }
   }
 
   .header__container {
-    background-color: var(--clr-black-10);
     width: 100%;
+    background-color: var(--clr-black-10);
+    border-color: #f5f6f812;
     box-shadow:
       0 1px 1px rgba(255, 255, 255, 0.1),
       0 4px 12px rgba(0, 0, 0, 0.2),
       0 12px 32px rgba(0, 0, 0, 0.18),
       0 24px 64px rgba(81, 81, 81, 0.168);
+
+    @media (width > 47.5rem) {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow:
+        0 1px 1px rgba(255, 255, 255, 0),
+        0 4px 12px rgba(0, 0, 0, 0),
+        0 12px 32px rgba(0, 0, 0, 0),
+        0 24px 64px rgba(81, 81, 81, 0);
+    }
   }
 
   .swup-header {
@@ -650,7 +672,7 @@
   }
 
   .business-logo-container {
-    max-width: clamp(4rem, 9vw + 2rem, 8rem);
+    max-width: clamp(6rem, 9vw + 2rem, 8.5rem);
   }
 
   .business-logo {
@@ -670,7 +692,6 @@
       font-size: 0.875rem;
       padding-inline: 2.625rem;
       padding-block: 0.85rem;
-      margin-right: 1.5rem;
     }
   }
 
@@ -754,7 +775,7 @@
     padding: 2em;
     text-align: center;
     z-index: -1;
-    border: 5px solid var(--clr-black-20);
+    border: 3px solid var(--clr-black-20);
     border-bottom-left-radius: 4.7rem;
     border-bottom-right-radius: 4.7rem;
     box-shadow:
@@ -771,6 +792,7 @@
     @media (width > 47.5rem) {
       position: relative;
       width: 100%;
+      background-color: inherit;
       padding: 0;
       z-index: 0;
       box-shadow: none;
@@ -781,10 +803,6 @@
         position: absolute;
         height: 0;
       }
-    }
-
-    @media (width > 62.5rem) {
-      left: 4%;
     }
 
     ul {
