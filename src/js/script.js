@@ -3,7 +3,6 @@ import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.time("init");
   runSwupHooks();
   activateHamburgerMenu();
   updateActiveNavLink();
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, 100);
   });
-  console.timeEnd("init");
 
   /* document.documentElement.classList.add("has-smooth-scroll"); */
 });
@@ -95,7 +93,7 @@ function gsapOpeningHomeAnimations() {
   const isMobile = window.matchMedia("(max-width: 62.5rem)");
 
   if (!document.body.classList.contains("home")) return;
-
+  console.log(document.body.classList.contains("home"));
   /* return; */
 
   window.addEventListener("load", () => {
@@ -106,7 +104,6 @@ function gsapOpeningHomeAnimations() {
 
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
-    delay: 0.2,
   });
 
   gsap.set(".cmp-main-btn--dark-btn", {
@@ -120,7 +117,7 @@ function gsapOpeningHomeAnimations() {
     },
     {
       clipPath: "inset(0 0 0% 0)",
-      duration: 2,
+      duration: .2,
       ease: "power2.inOut",
     },
   )
@@ -129,7 +126,7 @@ function gsapOpeningHomeAnimations() {
       {
         y: -30,
         opacity: 0,
-        duration: 2,
+        duration: .2,
       },
       "+=0.1",
     )
@@ -138,7 +135,7 @@ function gsapOpeningHomeAnimations() {
       {
         y: 30,
         opacity: 0,
-        duration: 2,
+        duration: .2,
       },
       "-=1.75",
     )
@@ -147,7 +144,7 @@ function gsapOpeningHomeAnimations() {
       {
         opacity: 0,
         x: -100,
-        duration: 2,
+        duration: .2,
       },
       "-=1.5",
     )
@@ -156,7 +153,7 @@ function gsapOpeningHomeAnimations() {
       {
         opacity: 0,
         x: 100,
-        duration: 2,
+        duration: .2,
         clearProps: "all",
       },
       "-=2",
@@ -166,7 +163,7 @@ function gsapOpeningHomeAnimations() {
       {
         y: -30,
         opacity: 0,
-        duration: 2,
+        duration: .2,
       },
       "-=2",
     )
@@ -175,7 +172,7 @@ function gsapOpeningHomeAnimations() {
       {
         y: 30,
         opacity: 0,
-        duration: 2,
+        duration: .2,
       },
       "-=1",
     )
@@ -183,7 +180,7 @@ function gsapOpeningHomeAnimations() {
       ".side-glow",
       {
         opacity: 0,
-        duration: 2,
+        duration: .2,
       },
       "-=3",
     );
