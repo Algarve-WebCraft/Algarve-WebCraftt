@@ -663,11 +663,11 @@
     }
   }
 
-  /* .swup-header {
+  .swup-header {
     display: contents;
-  } */
+  }
 
-  .wrapper--header {
+  /* .wrapper--header {
     min-height: clamp(4.5rem, 11vw, 5.25rem);
     display: flex;
     justify-content: space-between;
@@ -676,7 +676,7 @@
 
   .business-logo-container {
     max-width: clamp(6rem, 9vw + 2rem, 8.5rem);
-  }
+  } */
 
   .business-logo {
     width: 100%;
