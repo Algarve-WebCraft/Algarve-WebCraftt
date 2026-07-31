@@ -66,6 +66,16 @@ function runSwupHooks() {
     resetColors();
     updateCopyrightYear();
 
+    document.querySelectorAll("video").forEach((video) => {
+      video.load();
+
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => console.log(err));
+      }
+    });
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     gsapScrollAnimations();
