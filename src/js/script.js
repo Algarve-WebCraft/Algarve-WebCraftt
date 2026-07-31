@@ -686,9 +686,14 @@ function initStickyHeader() {
 
     if (isScrolled && !headerWasSticking) {
       header.classList.add("sticking");
+
+      requestAnimationFrame(() => {
+        header.classList.add("slide-down");
+      });
       closeMenuSafely();
-    } else if (window.scrollY === 0 && headerWasSticking) {
+    } else if (window.scrollY < 5 && headerWasSticking) {
       header.classList.remove("sticking");
+      header.classList.remove("slide-down");
       closeMenuSafely();
     }
   });
