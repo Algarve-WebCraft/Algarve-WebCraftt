@@ -540,58 +540,7 @@
 }
 
 @layer base {
-  html {
-    scrollbar-width: thin;
-
-    &.is-loading body {
-      opacity: 0 !important;
-    }
-
-    &.has-smooth-scroll {
-      scroll-behavior: smooth;
-    }
-  }
-
-  /* For speed section color change */
-
-
-  html,
-  body {
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100svh;
-    background-color: var(--clr-black-10);
-    font-size: var(--fs-body-text);
-    font-family: var(--ff-geist);
-    font-weight: var(--fw-regular);
-    color: var(--clr-white-20);
-    line-height: var(--lh-155);
-    letter-spacing: var(--ls-t-005);
-    overflow: clip;
-
-    > * {
-      min-width: 0;
-    }
-  }
-
-  img:not(.hero-image):not(#business-logo):not(.portfolio-hero-image) {
-    transition: transform 0.2s ease-in;
-    box-shadow:
-      0 6px 12px rgba(0, 0, 0, 0.4),
-      0 4px 8px rgba(0, 0, 0, 0.2),
-      0 0 0 1px rgba(255, 255, 255, 0.04);
-    z-index: 1;
-
-    &:hover {
-      transform: translateY(-1px);
-      z-index: 1;
-    }
-  }
+  
 
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\      *** HEADER ***       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
