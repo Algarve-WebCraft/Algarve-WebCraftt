@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   activateHamburgerMenu();
   updateActiveNavLink();
   resetHomeLoadedClass();
-  initStickyHeader();
+  /* initStickyHeader(); */
   initLanguageChange();
   updateCopyrightYear();
   initAccordion();
@@ -58,7 +58,7 @@ function runSwupHooks() {
   swup.hooks.on("page:view", () => {
     activateHamburgerMenu();
     updateActiveNavLink();
-    initStickyHeader();
+    /* initStickyHeader(); */
     initLanguageChange();
     initAccordion();
     initSpeedColors();
@@ -66,7 +66,7 @@ function runSwupHooks() {
     resetColors();
     updateCopyrightYear();
 
-    document.querySelectorAll("video").forEach((video) => {
+    /* document.querySelectorAll("video").forEach((video) => {
       video.load();
 
       const playPromise = video.play();
@@ -74,7 +74,7 @@ function runSwupHooks() {
       if (playPromise !== undefined) {
         playPromise.catch((err) => console.log(err));
       }
-    });
+    }); */
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -679,7 +679,7 @@ function updateActiveNavLink() {
 
 ///////////////////////////////////////////////////////////////* Sticky navigation bar *//////////////////////////////////////////////////////////////////////////////*
 
-function initStickyHeader() {
+/* function initStickyHeader() {
   const hamburgerBtn = document.querySelector(".hamburger-btn");
   const navBar = document.querySelector(".nav-bar");
 
@@ -707,7 +707,7 @@ function initStickyHeader() {
       closeMenuSafely();
     }
   });
-}
+} */
 
 //////////////////////////////////////////////////////////////* Footer copyright-year update *////////////////////////////////////////////////////////////////////////*
 
