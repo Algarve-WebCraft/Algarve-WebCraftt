@@ -669,6 +669,9 @@
 
   .wrapper--header {
     min-height: clamp(4.5rem, 11vw, 5.25rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .business-logo-container {
