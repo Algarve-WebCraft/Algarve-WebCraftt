@@ -882,12 +882,12 @@
             width: 85%;
           }
 
-          &:hover {
+          /* &:hover {
             transform: rotateY(
                 calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
               )
               translateZ(clamp(4.37rem, 35vw, 25rem)) scale(1.3);
-          }
+          } */
 
           a {
             display: block;
