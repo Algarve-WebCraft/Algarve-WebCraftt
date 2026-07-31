@@ -3,18 +3,19 @@ import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.time("init");
   runSwupHooks();
-  /* activateHamburgerMenu(); */
-  /* updateActiveNavLink();
+  activateHamburgerMenu();
+  updateActiveNavLink();
   resetHomeLoadedClass();
   initStickyHeader();
   initLanguageChange();
   updateCopyrightYear();
   initAccordion();
-  initSpeedColors(); */
-  /* gsapSwupAnimations(); */
-  /* gsapRocketFlame();
-  stopTransitionOnResize(); */
+  initSpeedColors();
+  gsapSwupAnimations();
+  gsapRocketFlame();
+  stopTransitionOnResize();
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -22,18 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.classList.remove("is-loading");
 
     requestAnimationFrame(() => {
-      /* gsapOpeningHomeAnimations(); */
+      gsapOpeningHomeAnimations();
     });
   });
 
-  /* window.addEventListener("load", () => {
+  window.addEventListener("load", () => {
     setTimeout(() => {
       requestAnimationFrame(() => {
         gsapScrollAnimations();
         ScrollTrigger.refresh();
       });
     }, 100);
-  }); */
+  });
+  console.timeEnd("init");
 
   /* document.documentElement.classList.add("has-smooth-scroll"); */
 });
@@ -72,7 +74,7 @@ function runSwupHooks() {
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    /* gsapScrollAnimations(); */
+    gsapScrollAnimations();
   });
 
   // Prevents the browser from smooth scrolling when changing pages, only happens when still on the same page.
