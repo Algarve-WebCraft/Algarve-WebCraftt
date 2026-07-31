@@ -616,7 +616,7 @@
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\      *** HEADER ***       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
-  /* .header {
+  .header {
     position: sticky;
     top: -0.5px;
     z-index: 1000;
@@ -640,9 +640,9 @@
           0 24px 64px rgba(81, 81, 81, 0.168);
       }
     }
-  } */
+  }
 
-  .header__container {
+  /* .header__container {
     width: 100%;
     background-color: var(--clr-black-10);
     border-color: #f5f6f812;
@@ -665,7 +665,7 @@
 
   .swup-header {
     display: contents;
-  }
+  } */
 
   .wrapper--header {
     min-height: clamp(4.5rem, 11vw, 5.25rem);
