@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     document.documentElement.classList.remove("is-loading");
 
-    requestAnimationFrame(() => {
-      gsapOpeningHomeAnimations();
-    });
+    if (document.body.classList.contains("home")) {
+      requestAnimationFrame(() => {
+        gsapOpeningHomeAnimations();
+      });
+    }
   });
 
   window.addEventListener("load", () => {
@@ -34,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, 100);
   });
-
-  /* document.documentElement.classList.add("has-smooth-scroll"); */
 });
 
 ///////////////////////////////////////////////////////////* Swup page navigation *////////////////////////////////////////////////////////////////////////////////////////*
@@ -91,7 +91,7 @@ function gsapOpeningHomeAnimations() {
   const heroHeading = document.querySelector(".cmp-hero-heading");
   const isMobile = window.matchMedia("(max-width: 62.5rem)");
 
- /*  if (!document.body.classList.contains("home")) return; */
+  /*  if (!document.body.classList.contains("home")) return; */
 
   /* return; */
 
