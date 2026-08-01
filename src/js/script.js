@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   });
 
-  document.documentElement.classList.add("has-smooth-scroll");
+  /* document.documentElement.classList.add("has-smooth-scroll"); */
 });
 
 ///////////////////////////////////////////////////////////* Swup page navigation *////////////////////////////////////////////////////////////////////////////////////////*
@@ -91,7 +91,7 @@ function gsapOpeningHomeAnimations() {
   const heroHeading = document.querySelector(".cmp-hero-heading");
   const isMobile = window.matchMedia("(max-width: 62.5rem)");
 
-  if (!document.body.classList.contains("home")) return;
+ /*  if (!document.body.classList.contains("home")) return; */
 
   /* return; */
 
@@ -167,7 +167,7 @@ function gsapOpeningHomeAnimations() {
       },
       "-=2",
     )
-    /* .from(
+    .from(
       ".hero-image-container",
       {
         y: 30,
@@ -175,15 +175,7 @@ function gsapOpeningHomeAnimations() {
         duration: 2,
       },
       "-=1",
-    )
-    .from(
-      ".side-glow",
-      {
-        opacity: 0,
-        duration: 2,
-      },
-      "-=3",
-    ) */;
+    );
 }
 
 function resetHomeLoadedClass() {
