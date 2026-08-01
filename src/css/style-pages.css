@@ -349,8 +349,9 @@
     button {
       margin-inline: auto;
       grid-row: 7 / 8;
-
+      
       @media (width > 62.5rem) {
+        margin-inline: unset;
         grid-row: 5 / 6;
       }
     }
@@ -375,6 +376,8 @@
 
       input,
       textarea {
+        font-size: 1rem;
+        font-family: var(--ff-geist);
         width: 100%;
         color: var(--clr-white-20);
         background: var(--clr-black-10);

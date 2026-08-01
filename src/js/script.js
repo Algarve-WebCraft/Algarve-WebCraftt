@@ -26,16 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* window.addEventListener("load", () => {
+  window.addEventListener("load", () => {
     setTimeout(() => {
       requestAnimationFrame(() => {
         gsapScrollAnimations();
         ScrollTrigger.refresh();
       });
     }, 100);
-  }); */
+  });
 
-  /* document.documentElement.classList.add("has-smooth-scroll"); */
+  document.documentElement.classList.add("has-smooth-scroll");
 });
 
 ///////////////////////////////////////////////////////////* Swup page navigation *////////////////////////////////////////////////////////////////////////////////////////*
@@ -110,7 +110,7 @@ function gsapOpeningHomeAnimations() {
     transition: "none",
   });
 
-  tl/* .fromTo(
+  tl.fromTo(
     ".cmp-hero-heading",
     {
       clipPath: "inset(0 0 100% 0)",
@@ -120,7 +120,7 @@ function gsapOpeningHomeAnimations() {
       duration: 2,
       ease: "power2.inOut",
     },
-  ) */
+  )
     .from(
       ".cmp-main-text",
       {
@@ -167,7 +167,7 @@ function gsapOpeningHomeAnimations() {
       },
       "-=2",
     )
-    .from(
+    /* .from(
       ".hero-image-container",
       {
         y: 30,
@@ -183,7 +183,7 @@ function gsapOpeningHomeAnimations() {
         duration: 2,
       },
       "-=3",
-    );
+    ) */;
 }
 
 function resetHomeLoadedClass() {

@@ -675,7 +675,7 @@
   }
 
   .business-logo-container {
-    max-width: clamp(6rem, 9vw + 2rem, 8.5rem);
+    max-width: clamp(7rem, 9vw + 2rem, 8.5rem);
   }
 
   .business-logo {
