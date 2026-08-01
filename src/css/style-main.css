@@ -973,7 +973,7 @@
   }
 
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-  /* \\\\\\\\\\\\\\\\\\\\\\\      *** SECTION-FIVE / TWO WAYS ***       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+  /* \\\\\\\\\\\\\\\\\\\\\\\      *** SECTION-SIX / TWO WAYS ***       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
   .ways-section-container {
@@ -1180,7 +1180,7 @@
   }
 
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-  /* \\\\\\\\\\\\\\\\\\\\\\\      *** SECTION-FIVE / THEIR WORDS ***       \\\\\\\\\\\\\\\\\\\\\\\\\\ */
+  /* \\\\\\\\\\\\\\\\\\\\\\\      *** SECTION-SEVEN / THEIR WORDS ***       \\\\\\\\\\\\\\\\\\\\\\\\\ */
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
   .testimonial-section-container {
@@ -1290,7 +1290,7 @@
   }
 
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-  /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\      *** FOOTER ***       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+  /* \\\\\\\\\\\\\\\\\\\\\\\\      *** SECTION-EIGHT / FOOTER ***       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
   .footer-section {
@@ -1316,37 +1316,77 @@
 
   .footer-video-container {
     display: grid;
+    border-radius: 65px;
+    min-height: 380px;
+    margin-inline: auto;
+    width: 90%;
+    filter: drop-shadow(0 0 12px oklch(81.239% 0.09981 247.028 / 0.3))
+      drop-shadow(0 0 84px oklch(72.882% 0.14333 254.32 / 0.2))
+      drop-shadow(0 0 128px oklch(65.74% 0.18218 261.963 / 0.1));
+
+    @media (width > 47.5rem) {
+      width: 90%;
+    }
+
+    @media (width > 62.5rem) {
+      width: 70%;
+      border-radius: 15%;
+      min-height: 550px;
+    }
+
+    @media (width > 75rem) {
+      border-radius: 55px;
+    }
 
     & > * {
       grid-area: 1 / 1;
     }
 
     video {
-      width: 90%;
+      width: 100%;
       height: 100%;
-      min-height: 380px;
+      border-radius: 1rem;
       object-fit: cover;
-      margin-inline: auto;
-      border-radius: 65px;
-      opacity: 0.6;
-      filter: drop-shadow(0 0 20px oklch(81.239% 0.09981 247.028 / 0.45))
-        drop-shadow(0 0 65px oklch(72.882% 0.14333 254.32 / 0.35))
-        drop-shadow(0 0 100px oklch(65.74% 0.18218 261.963 / 0.2));
+      filter: brightness(0.7) saturate(0.75);
 
       @media (width > 47.5rem) {
-        width: 90%;
         object-fit: contain;
       }
 
-      @media (width > 62.5rem) {
-        width: 70%;
-        border-radius: 15%;
-        min-height: 550px;
-      }
+      mask-image:
+        linear-gradient(
+          to right,
+          transparent,
+          black 3%,
+          black 97%,
+          transparent
+        ),
+        linear-gradient(
+          to bottom,
+          transparent,
+          black 3%,
+          black 97%,
+          transparent
+        );
 
-      @media (width > 75rem) {
-        border-radius: 55px;
-      }
+      -webkit-mask-image:
+        linear-gradient(
+          to right,
+          transparent,
+          black 4%,
+          black 96%,
+          transparent
+        ),
+        linear-gradient(
+          to bottom,
+          transparent,
+          black 3%,
+          black 97%,
+          transparent
+        );
+
+      -webkit-mask-composite: source-in;
+      mask-composite: intersect;
     }
 
     .footer-video__text {
@@ -1367,7 +1407,7 @@
       }
 
       h2 {
-        font-size: clamp(1.25rem, 3vw + 0.4rem, var(--fs-56));
+        font-size: clamp(var(--fs-24), 3vw + 0.4rem, var(--fs-56));
         max-width: 30ch;
 
         @media (width > 62.5rem) {
@@ -1376,7 +1416,7 @@
       }
 
       p {
-        font-size: clamp(0.75rem, 2vw + 0.2rem, var(--fs-20));
+        font-size: clamp(var(--fs-14), 2vw + 0.2rem, var(--fs-20));
         max-width: 30ch;
 
         @media (width > 62.5rem) {
@@ -1385,7 +1425,7 @@
       }
 
       a {
-        font-size: clamp(0.5rem, 1.5vw + 0.2rem, var(--fs-16));
+        font-size: clamp(var(--fs-12), 1.5vw + 0.2rem, var(--fs-16));
         background: var(--clr-gradient-10);
         align-self: center;
         margin-top: 2rem;

@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  window.addEventListener("load", () => {
+  /* window.addEventListener("load", () => {
     setTimeout(() => {
       requestAnimationFrame(() => {
         gsapScrollAnimations();
         ScrollTrigger.refresh();
       });
     }, 100);
-  });
+  }); */
 
   /* document.documentElement.classList.add("has-smooth-scroll"); */
 });
@@ -75,7 +75,6 @@ function runSwupHooks() {
     gsapScrollAnimations();
   });
 
-  // Prevents the browser from smooth scrolling when changing pages, only happens when still on the same page.
   swup.hooks.on("visit:start", () => {
     document.documentElement.classList.remove("has-smooth-scroll");
   });
@@ -92,8 +91,8 @@ function gsapOpeningHomeAnimations() {
   const heroHeading = document.querySelector(".cmp-hero-heading");
   const isMobile = window.matchMedia("(max-width: 62.5rem)");
 
-  /* if (!document.body.classList.contains("home")) return; */
-  
+  if (!document.body.classList.contains("home")) return;
+
   /* return; */
 
   window.addEventListener("load", () => {
@@ -111,7 +110,7 @@ function gsapOpeningHomeAnimations() {
     transition: "none",
   });
 
-  tl.fromTo(
+  tl/* .fromTo(
     ".cmp-hero-heading",
     {
       clipPath: "inset(0 0 100% 0)",
@@ -121,7 +120,7 @@ function gsapOpeningHomeAnimations() {
       duration: 2,
       ease: "power2.inOut",
     },
-  )
+  ) */
     .from(
       ".cmp-main-text",
       {
@@ -144,7 +143,7 @@ function gsapOpeningHomeAnimations() {
       ".hero-btn-container a:first-of-type",
       {
         opacity: 0,
-        x: -100,
+        x: -50,
         duration: 2,
       },
       "-=1.5",
@@ -153,7 +152,7 @@ function gsapOpeningHomeAnimations() {
       ".hero-btn-container a:last-of-type",
       {
         opacity: 0,
-        x: 100,
+        x: 50,
         duration: 2,
         clearProps: "all",
       },
