@@ -22,9 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gsapOpeningHomeAnimations();
   });
 
-  document.documentElement.classList.remove("is-loading");
-
-  /* window.addEventListener("load", () => {
+  window.addEventListener("load", () => {
+    document.documentElement.classList.remove("is-loading");
 
     setTimeout(() => {
       requestAnimationFrame(() => {
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ScrollTrigger.refresh();
       });
     }, 100);
-  }); */
+  });
 });
 
 ///////////////////////////////////////////////////////////* Swup page navigation *////////////////////////////////////////////////////////////////////////////////////////*
@@ -87,13 +86,13 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  /*  return; */
+  /* return; */
 
-  /* window.addEventListener("load", () => {
+  window.addEventListener("load", () => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "auto" });
     }, 0);
-  }); */
+  });
 
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
