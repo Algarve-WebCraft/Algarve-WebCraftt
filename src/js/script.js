@@ -1,12 +1,12 @@
 "use strict";
 import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
+import SwupBodyClassPlugin from "@swup/body-class-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
   runSwupHooks();
   activateHamburgerMenu();
   updateActiveNavLink();
-  resetHomeLoadedClass();
   initStickyHeader();
   initLanguageChange();
   updateCopyrightYear();
@@ -18,17 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  window.addEventListener("load", () => {
-    document.documentElement.classList.remove("is-loading");
-
-    if (document.body.classList.contains("home")) {
-      requestAnimationFrame(() => {
-        gsapOpeningHomeAnimations();
-      });
-    }
+  requestAnimationFrame(() => {
+    gsapOpeningHomeAnimations();
   });
 
   window.addEventListener("load", () => {
+    document.documentElement.classList.remove("is-loading");
+
     setTimeout(() => {
       requestAnimationFrame(() => {
         gsapScrollAnimations();
@@ -50,6 +46,7 @@ const swup = new Swup({
       awaitAssets: false,
       persistAssets: true,
     }),
+    new SwupBodyClassPlugin(),
   ],
 });
 
@@ -79,21 +76,17 @@ function runSwupHooks() {
     document.documentElement.classList.remove("has-smooth-scroll");
   });
 
-  swup.hooks.on("visit:end", () => {
-    document.documentElement.classList.add("has-smooth-scroll");
-  });
+  swup.hooks.on("visit:end", () => {});
 }
 
 /////////////////////////////////////////////////////////////* Opening + Swup animations *///////////////////////////////////////////////////////////////////////////*
 
 function gsapOpeningHomeAnimations() {
   const body = document.body;
-  const heroHeading = document.querySelector(".cmp-hero-heading");
-  const isMobile = window.matchMedia("(max-width: 62.5rem)");
 
-  /*  if (!document.body.classList.contains("home")) return; */
+  if (!document.body.classList.contains("home")) return;
 
-  /* return; */
+  /*  return; */
 
   window.addEventListener("load", () => {
     setTimeout(() => {
@@ -176,13 +169,6 @@ function gsapOpeningHomeAnimations() {
       },
       "-=1",
     );
-}
-
-function resetHomeLoadedClass() {
-  if (!document.body.classList.contains("home")) {
-    document.body.classList.add("loaded");
-    return;
-  }
 }
 
 function gsapSwupAnimations() {
