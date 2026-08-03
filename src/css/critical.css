@@ -543,9 +543,9 @@
   html {
     scrollbar-width: thin;
 
-    &.is-loading body {
+    /* &.is-loading body {
       opacity: 0 !important;
-    }
+    } */
 
     &.has-smooth-scroll {
       scroll-behavior: smooth;

@@ -21,6 +21,7 @@
   "dependencies": {
     "@swup/body-class-plugin": "^3.3.0",
     "@swup/head-plugin": "^2.3.1",
+    "@swup/preload-plugin": "^3.2.11",
     "nunjucks": "^3.2.4",
     "swup": "^4.9.2"
   },

@@ -2,6 +2,7 @@
 import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
+import SwupPreloadPlugin from "@swup/preload-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
   runSwupHooks();
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("load", () => {
-    document.documentElement.classList.remove("is-loading");
+    /* document.documentElement.classList.remove("is-loading"); */
 
     setTimeout(() => {
       requestAnimationFrame(() => {
@@ -43,10 +44,13 @@ const swup = new Swup({
 
   plugins: [
     new SwupHeadPlugin({
-      awaitAssets: false,
+      awaitAssets: true,
       persistAssets: true,
     }),
     new SwupBodyClassPlugin(),
+    new SwupPreloadPlugin({
+      preloadVisibleLinks: false,
+    }),
   ],
 });
 
