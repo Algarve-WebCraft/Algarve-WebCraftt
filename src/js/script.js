@@ -1,8 +1,8 @@
 "use strict";
 import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
-import SwupBodyClassPlugin from "@swup/body-class-plugin";
 import SwupPreloadPlugin from "@swup/preload-plugin";
+import SwupBodyClassPlugin from "@swup/body-class-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
   runSwupHooks();
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLanguageChange();
   updateCopyrightYear();
   initAccordion();
+  initContactForm();
   initSpeedColors();
   gsapSwupAnimations();
   gsapRocketFlame();
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("load", () => {
-    /* document.documentElement.classList.remove("is-loading"); */
+    document.documentElement.classList.remove("is-loading");
 
     setTimeout(() => {
       requestAnimationFrame(() => {
@@ -61,6 +62,7 @@ function runSwupHooks() {
     initStickyHeader();
     initLanguageChange();
     initAccordion();
+    initContactForm();
     initSpeedColors();
     gsapRocketFlame();
     resetColors();
@@ -80,7 +82,9 @@ function runSwupHooks() {
     document.documentElement.classList.remove("has-smooth-scroll");
   });
 
-  swup.hooks.on("visit:end", () => {});
+  swup.hooks.on("visit:end", () => {
+    document.documentElement.classList.add("has-smooth-scroll");
+  });
 }
 
 /////////////////////////////////////////////////////////////* Opening + Swup animations *///////////////////////////////////////////////////////////////////////////*
@@ -88,7 +92,7 @@ function runSwupHooks() {
 function gsapOpeningHomeAnimations() {
   const body = document.body;
 
-  if (!document.body.classList.contains("home")) return;
+  /* if (!document.body.classList.contains("home")) return; */
 
   /* return; */
 
@@ -474,7 +478,7 @@ function resetColors() {
   document.documentElement.dataset.theme = "ocean";
 }
 
-//////////////////////////////////////////////////////////////////* FAQ accordion */////////////////////////////////////////////////////////////////////////////*
+//////////////////////////////////////////////////////////////////////* FAQ accordion */////////////////////////////////////////////////////////////////////////////////*
 
 function initAccordion() {
   let currentOpenItem =
@@ -554,6 +558,77 @@ function initAccordion() {
       }
     });
   });
+}
+
+///////////////////////////////////////////////////////////////////* Contact section form *///////////////////////////////////////////////////////////////////////////////*
+
+function initContactForm() {
+  const form = document.getElementById("form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed.");
+      }
+
+      form.reset();
+
+      showToast(
+        "Message sent!",
+        "Thanks for getting in touch. I'll reply as soon as I can.",
+      );
+    } catch {
+      showToast("Sorry something went wrong", "Please try again in a moment.");
+    }
+  });
+}
+
+function showToast(title, message) {
+  const toast = document.querySelector("#toast");
+
+  toast.querySelector(".toast__title").textContent = title;
+  toast.querySelector(".toast__text").textContent = message;
+
+  gsap.killTweensOf(toast);
+
+  gsap.set(toast, {
+    visibility: "visible",
+    pointerEvents: "auto",
+  });
+
+  gsap
+    .timeline()
+    .to(toast, {
+      y: 0,
+      opacity: 1,
+      duration: 0.35,
+      ease: "power2.out",
+    })
+    .to({}, { duration: 4 })
+    .to(toast, {
+      y: 20,
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.in",
+      onComplete: () => {
+        gsap.set(toast, {
+          visibility: "hidden",
+          pointerEvents: "none",
+        });
+      },
+    });
 }
 
 ////////////////////////////////////////////////////* Hamburger menu and Navigation accessibility attributes */////////////////////////////////////////////////////////*

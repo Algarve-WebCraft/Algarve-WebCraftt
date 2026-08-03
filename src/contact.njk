@@ -32,7 +32,7 @@ footer_span: 'deserves.'
   <div class="wrapper wrapper--mobile-32">
 
     <div class="contact-container">
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-animate="slide-up">
+      <form id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-animate="slide-up">
         <input type="hidden" name="form-name" value="contact" />
 
         <p hidden>
@@ -77,6 +77,13 @@ footer_span: 'deserves.'
           </svg>
         </button>
       </form>
+
+      <div class="contact-toast" id="toast" aria-live="polite">
+        <div class="toast__content">
+          <strong class="toast__title">Message sent!</strong>
+          <p class="toast__text">Thanks for getting in touch. I'll reply as soon as I can.</p>
+        </div>
+      </div>
 
       <div class="info-container" data-animate-group data-animate-stagger="0.3">
         <a href="mailto:algarvewebcraft@gmail.com">
