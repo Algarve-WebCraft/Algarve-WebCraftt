@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLanguageChange();
   updateCopyrightYear();
   initAccordion();
-  initContactForm();
+  /* initContactForm(); */
   initSpeedColors();
   gsapSwupAnimations();
   gsapRocketFlame();
@@ -62,7 +62,7 @@ function runSwupHooks() {
     initStickyHeader();
     initLanguageChange();
     initAccordion();
-    initContactForm();
+    /* initContactForm(); */
     initSpeedColors();
     gsapRocketFlame();
     resetColors();
@@ -562,7 +562,7 @@ function initAccordion() {
 
 ///////////////////////////////////////////////////////////////////* Contact section form *///////////////////////////////////////////////////////////////////////////////*
 
-function initContactForm() {
+/* function initContactForm() {
   const form = document.getElementById("form");
 
   form.addEventListener("submit", async (e) => {
@@ -629,7 +629,7 @@ function showToast(title, message) {
         });
       },
     });
-}
+} */
 
 ////////////////////////////////////////////////////* Hamburger menu and Navigation accessibility attributes */////////////////////////////////////////////////////////*
 
