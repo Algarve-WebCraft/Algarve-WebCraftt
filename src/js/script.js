@@ -1,7 +1,7 @@
 "use strict";
 import Swup from "swup";
 import SwupHeadPlugin from "@swup/head-plugin";
-/* import SwupPreloadPlugin from "@swup/preload-plugin"; */
+import SwupPreloadPlugin from "@swup/preload-plugin";
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,9 +49,9 @@ const swup = new Swup({
       persistAssets: true,
     }),
     new SwupBodyClassPlugin(),
-    /* new SwupPreloadPlugin({
+    new SwupPreloadPlugin({
       preloadVisibleLinks: false,
-    }), */
+    }),
   ],
 });
 
