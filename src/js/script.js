@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLanguageChange();
   updateCopyrightYear();
   initAccordion();
-  /* initContactForm(); */
+  initContactForm();
   initSpeedColors();
   gsapSwupAnimations();
   gsapRocketFlame();
@@ -62,7 +62,7 @@ function runSwupHooks() {
     initStickyHeader();
     initLanguageChange();
     initAccordion();
-    /* initContactForm(); */
+    initContactForm();
     initSpeedColors();
     gsapRocketFlame();
     resetColors();
@@ -94,7 +94,7 @@ function gsapOpeningHomeAnimations() {
 
   /* if (!document.body.classList.contains("home")) return; */
 
-  /* return; */
+  return;
 
   window.addEventListener("load", () => {
     setTimeout(() => {
@@ -562,8 +562,10 @@ function initAccordion() {
 
 ///////////////////////////////////////////////////////////////////* Contact section form *///////////////////////////////////////////////////////////////////////////////*
 
-/* function initContactForm() {
+function initContactForm() {
   const form = document.getElementById("form");
+
+  if (!form) return;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -629,7 +631,7 @@ function showToast(title, message) {
         });
       },
     });
-} */
+}
 
 ////////////////////////////////////////////////////* Hamburger menu and Navigation accessibility attributes */////////////////////////////////////////////////////////*
 
