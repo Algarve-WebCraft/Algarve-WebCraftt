@@ -1352,7 +1352,7 @@
         object-fit: contain;
       }
 
-      mask-image:
+      /* mask-image:
         linear-gradient(
           to right,
           transparent,
@@ -1382,7 +1382,7 @@
           black 3%,
           black 97%,
           transparent
-        );
+        ); */
 
       -webkit-mask-composite: source-in;
       mask-composite: intersect;
