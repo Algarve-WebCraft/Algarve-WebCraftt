@@ -1546,19 +1546,23 @@
     }
 
     .footer-logo-container {
-      display: none;
+      display: flex;
+      justify-content: left;
+      gap: 1.5rem;
 
       @media (width > 47.5rem) {
-        display: flex;
         justify-content: center;
-        gap: 1.5rem;
       }
 
       svg {
-        min-width: 32px;
+        width: 1.75rem;
         transition: scale 0.5s ease-out;
         /* prettier-ignore */
         transition-timing-function: linear(0, 1.014 17%, 1.307 26%, 1.473 35.8%, 1.514 44%, 1.48 53.2%, 1.077 86.4%, 1);
+
+        @media (width > 47.5rem) {
+          width: 2rem;
+        }
 
         &:hover {
           scale: 1.3;
