@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveNavLink();
   initStickyHeader();
   initLanguageChange();
+  initFooterVideo();
   updateCopyrightYear();
   initAccordion();
   initContactForm();
@@ -60,18 +61,14 @@ function runSwupHooks() {
     activateHamburgerMenu();
     updateActiveNavLink();
     initStickyHeader();
+    initSpeedColors();
     initLanguageChange();
     initAccordion();
+    initFooterVideo();
     initContactForm();
-    initSpeedColors();
     gsapRocketFlame();
     resetColors();
     updateCopyrightYear();
-
-    const footerVideo = document.querySelector(".footer-video-container video");
-
-    footerVideo?.load();
-    footerVideo?.play().catch(() => {});
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -631,6 +628,24 @@ function showToast(title, message) {
         });
       },
     });
+}
+
+////////////////////////////////////////////////////////////////////* Footer video logic */////////////////////////////////////////////////////////*
+
+function initFooterVideo() {
+  const footerVideo = document.querySelector(".footer-video-container video");
+  const source = footerVideo.querySelector("source");
+
+  if (!footerVideo || !source) return;
+
+  if (window.innerWidth <= 768) {
+    source.src = "/assets/videos/footer-glow-video-mobile.mp4";
+  } else {
+    source.src = "/assets/videos/footer-glow-video.mp4";
+  }
+
+  footerVideo.load();
+  footerVideo.play().catch(() => {});
 }
 
 ////////////////////////////////////////////////////* Hamburger menu and Navigation accessibility attributes */////////////////////////////////////////////////////////*
