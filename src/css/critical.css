@@ -586,7 +586,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* body {
+  body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100svh;
@@ -602,7 +602,7 @@
     > * {
       min-width: 0;
     }
-  } */
+  }
 
   img:not(.hero-image):not(#business-logo):not(.portfolio-hero-image) {
     transition: transform 0.2s ease-in;
@@ -928,7 +928,7 @@
     }
   }
 
-  .side-glow {
+  /* .side-glow {
     position: fixed;
     top: 50%;
     left: -50%;
@@ -947,7 +947,7 @@
     right: -50%;
     background: var(--clr-base-green);
     opacity: 0.12;
-  }
+  } */
 }
 
 @layer utilities {
