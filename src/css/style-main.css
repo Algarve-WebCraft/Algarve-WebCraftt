@@ -1311,7 +1311,7 @@
     }
   }
 
-  .footer-video-container {                        
+  /* .footer-video-container {                        
     display: grid;
     border-radius: 65px;
     min-height: 380px;
@@ -1346,7 +1346,7 @@
       height: 100%;
       border-radius: 3rem;
       object-fit: cover;
-      /* filter: brightness(0.7) saturate(0.75); */
+      filter: brightness(0.7) saturate(0.75);
 
       @media (width > 47.5rem) {
         object-fit: contain;
@@ -1445,7 +1445,7 @@
     .cmp-main-btn--footer-btn {
       background: var(--clr-gradient-horizontal) !important;
     }
-  }
+  } */
 
   .footer-container {
     display: grid;
