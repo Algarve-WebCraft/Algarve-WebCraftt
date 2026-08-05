@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   requestAnimationFrame(() => {
-    /* gsapOpeningHomeAnimations(); */
+    gsapOpeningHomeAnimations();
   });
 
   window.addEventListener("load", () => {
@@ -89,7 +89,7 @@ function runSwupHooks() {
 
 /////////////////////////////////////////////////////////////* Opening + Swup animations *///////////////////////////////////////////////////////////////////////////*
 
-/* function gsapOpeningHomeAnimations() {
+function gsapOpeningHomeAnimations() {
   const body = document.body;
 
   if (!document.body.classList.contains("home")) return;
@@ -177,7 +177,7 @@ function runSwupHooks() {
       },
       "-=1",
     );
-} */
+}
 
 function gsapSwupAnimations() {
   swup.hooks.on("visit:start", () => {
