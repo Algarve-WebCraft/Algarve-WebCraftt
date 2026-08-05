@@ -1317,9 +1317,9 @@
     min-height: 380px;
     margin-inline: auto;
     width: 90%;
-    filter: drop-shadow(0 0 12px oklch(81.239% 0.09981 247.028 / 0.25))
-      drop-shadow(0 0 84px oklch(72.882% 0.14333 254.32 / 0.18))
-      drop-shadow(0 0 128px oklch(65.74% 0.18218 261.963 / 0.1));
+    filter: drop-shadow(0 0 12px oklch(81.239% 0.09981 247.028 / 0.17))
+      drop-shadow(0 0 84px oklch(72.882% 0.14333 254.32 / 0.12))
+      drop-shadow(0 0 128px oklch(65.74% 0.18218 261.963 / 0.04));
 
     @media (width > 47.5rem) {
       filter: drop-shadow(0 0 12px oklch(81.239% 0.09981 247.028 / 0.5))
