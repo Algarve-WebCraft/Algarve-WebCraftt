@@ -45,7 +45,7 @@ const swup = new Swup({
 
   plugins: [
     new SwupHeadPlugin({
-      awaitAssets: true,
+      awaitAssets: false,
       persistAssets: true,
     }),
     new SwupBodyClassPlugin(),
