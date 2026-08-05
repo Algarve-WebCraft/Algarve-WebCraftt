@@ -94,7 +94,7 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  return;
+  /* return; */
 
   window.addEventListener("load", () => {
     setTimeout(() => {
