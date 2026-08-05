@@ -586,7 +586,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  body {
+  /* body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100svh;
@@ -602,7 +602,7 @@
     > * {
       min-width: 0;
     }
-  }
+  } */
 
   img:not(.hero-image):not(#business-logo):not(.portfolio-hero-image) {
     transition: transform 0.2s ease-in;
@@ -622,6 +622,31 @@
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\      *** HEADER ***       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
+  .header {
+    position: sticky;
+    top: -0.5px;
+    z-index: 1000;
+
+    @media (width > 47.5rem) {
+      position: relative;
+      transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+      &.sticking {
+        position: sticky;
+        background-color: var(--clr-black-10);
+        border-color: #f5f6f812;
+        animation: slideDown 1.2s ease-out forwards;
+        box-shadow:
+          0 1px 1px rgba(255, 255, 255, 0.1),
+          0 4px 12px rgba(0, 0, 0, 0.2),
+          0 12px 32px rgba(0, 0, 0, 0.18),
+          0 24px 64px rgba(81, 81, 81, 0.168);
+      }
+    }
+  }
 
   .header__container {
     width: 100%;
