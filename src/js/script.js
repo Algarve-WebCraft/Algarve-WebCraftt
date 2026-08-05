@@ -166,6 +166,14 @@ function gsapOpeningHomeAnimations() {
       "-=2",
     )
     .from(
+      ".side-glow",
+      {
+        opacity: 0,
+        duration: 2,
+      },
+      "-=2",
+    )
+    .from(
       ".hero-image-container",
       {
         y: 30,

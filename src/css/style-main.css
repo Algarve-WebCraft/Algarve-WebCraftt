@@ -1298,19 +1298,19 @@
       padding-top: unset;
     }
 
-    /* .bottom-glow {
-      position: absolute;
-      bottom: -40%;
-      left: 0;
-      width: 120rem;
-      height: 30rem;
-      border-radius: 30rem;
-      background: rgba(155, 143, 255, 0.1);
-      filter: blur(100px);
-      z-index: -1;
-
-      @media 
-    } */
+    .bottom-glow {
+      @media (width > 47.5rem) {
+        position: absolute;
+        bottom: -40%;
+        left: 0;
+        width: 120rem;
+        height: 30rem;
+        border-radius: 30rem;
+        background: rgba(155, 143, 255, 0.1);
+        filter: blur(100px);
+        z-index: -1;
+      }
+    }
   }
 
   .footer-video-container {
