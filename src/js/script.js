@@ -166,14 +166,6 @@ function gsapOpeningHomeAnimations() {
       "-=2",
     )
     .from(
-      ".side-glow",
-      {
-        opacity: 0,
-        duration: 2,
-      },
-      "-=2",
-    )
-    .from(
       ".hero-image-container",
       {
         y: 30,
@@ -577,6 +569,10 @@ function initContactForm() {
 
     try {
       const formData = new FormData(form);
+
+      for (const pair of formData.entries()) {
+        console.log(pair[0], pair[1]);
+      }
 
       const response = await fetch("/", {
         method: "POST",

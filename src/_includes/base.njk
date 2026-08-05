@@ -47,6 +47,13 @@
       {% block content %}{% endblock %}
     </main>
 
+    <div class="contact-toast" id="toast" aria-live="polite">
+        <div class="toast__content">
+          <strong class="toast__title">Message sent!</strong>
+          <p class="toast__text">Thanks for getting in touch. I'll reply as soon as I can.</p>
+        </div>
+      </div>
+
     {% include "footer.njk" %} 
   </body>
 </html>
