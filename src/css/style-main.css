@@ -1352,7 +1352,7 @@
         object-fit: contain;
       }
 
-      mask-image:
+      /* mask-image:
         linear-gradient(
           to right,
           transparent,
@@ -1385,7 +1385,7 @@
         );
 
       -webkit-mask-composite: source-in;
-      mask-composite: intersect;
+      mask-composite: intersect; */
     }
 
     .footer-video__text {

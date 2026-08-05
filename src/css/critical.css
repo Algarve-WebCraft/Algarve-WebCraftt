@@ -928,26 +928,36 @@
     }
   }
 
-  /* .side-glow {
+  .side-glow {
     position: fixed;
     top: 50%;
     left: -50%;
-    width: 70rem;
-    height: 50rem;
+    width: 25rem;
+    height: 15rem;
     border-radius: 68.75rem;
     background: var(--clr-base-blue);
+    filter: blur(30px);
     opacity: 0.12;
-    filter: blur(100px);
     z-index: -1;
+
+    @media (width > 47.5rem) {
+      width: 70rem;
+      height: 50rem;
+      filter: blur(100px);
+    }
   }
 
   .side-glow__right {
-    top: -50%;
+    top: 0%;
     left: unset;
     right: -50%;
     background: var(--clr-base-green);
     opacity: 0.12;
-  } */
+
+    @media (width > 47.5rem) {
+      top: -50%;
+    }
+  }
 }
 
 @layer utilities {
