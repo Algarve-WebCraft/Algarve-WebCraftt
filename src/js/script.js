@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveNavLink();
   initStickyHeader();
   initLanguageChange();
-  updateCopyrightYear();
+  /* updateCopyrightYear(); */
   initAccordion();
   initContactForm();
   initSpeedColors();
@@ -66,7 +66,7 @@ function runSwupHooks() {
     initSpeedColors();
     gsapRocketFlame();
     resetColors();
-    updateCopyrightYear();
+    /* updateCopyrightYear(); */
 
     const footerVideo = document.querySelector(".footer-video-container video");
 
