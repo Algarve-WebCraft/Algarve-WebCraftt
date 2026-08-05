@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveNavLink();
   initStickyHeader();
   initLanguageChange();
-  /* updateCopyrightYear(); */
+  updateCopyrightYear();
   initAccordion();
   initContactForm();
   initSpeedColors();
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   requestAnimationFrame(() => {
-    gsapOpeningHomeAnimations();
+    /* gsapOpeningHomeAnimations(); */
   });
 
   window.addEventListener("load", () => {
@@ -66,7 +66,7 @@ function runSwupHooks() {
     initSpeedColors();
     gsapRocketFlame();
     resetColors();
-    /* updateCopyrightYear(); */
+    updateCopyrightYear();
 
     const footerVideo = document.querySelector(".footer-video-container video");
 
@@ -89,10 +89,10 @@ function runSwupHooks() {
 
 /////////////////////////////////////////////////////////////* Opening + Swup animations *///////////////////////////////////////////////////////////////////////////*
 
-function gsapOpeningHomeAnimations() {
+/* function gsapOpeningHomeAnimations() {
   const body = document.body;
 
-  /* if (!document.body.classList.contains("home")) return; */
+  if (!document.body.classList.contains("home")) return;
 
   return;
 
@@ -177,7 +177,7 @@ function gsapOpeningHomeAnimations() {
       },
       "-=1",
     );
-}
+} */
 
 function gsapSwupAnimations() {
   swup.hooks.on("visit:start", () => {
