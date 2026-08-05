@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveNavLink();
   initStickyHeader();
   initLanguageChange();
-  /* initFooterVideo(); */
+  initFooterVideo();
   updateCopyrightYear();
   initAccordion();
   initContactForm();
@@ -64,7 +64,7 @@ function runSwupHooks() {
     initSpeedColors();
     initLanguageChange();
     initAccordion();
-    /* initFooterVideo(); */
+    initFooterVideo();
     initContactForm();
     gsapRocketFlame();
     resetColors();
