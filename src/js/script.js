@@ -570,10 +570,6 @@ function initContactForm() {
     try {
       const formData = new FormData(form);
 
-      for (const pair of formData.entries()) {
-        console.log(pair[0], pair[1]);
-      }
-
       const response = await fetch("/", {
         method: "POST",
         headers: {
@@ -691,11 +687,14 @@ function activateHamburgerMenu() {
   });
 
   document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+
     if (
       !navBar.classList.contains("hamburger-btn__open") ||
       e.target === navBar ||
       e.target === hamburgerBtn ||
-      e.target === navBarList
+      e.target === navBarList ||
+      (link && link.pathname === window.location.pathname)
     )
       return;
 

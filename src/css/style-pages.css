@@ -386,7 +386,7 @@
         padding: 0.85rem 1rem;
 
         &::placeholder {
-          opacity: 0.55;
+          opacity: 0.45;
         }
       }
 
