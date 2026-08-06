@@ -356,7 +356,7 @@
     width: 100%;
     margin-inline: auto;
     text-align: center;
-    margin-bottom: var(--sp-24);
+    margin-bottom: var(--sp-48);
 
     @media (width > 47.5rem) {
       margin-bottom: var(--sp-64);
@@ -383,10 +383,12 @@
     font-weight: var(--fw-medium);
     color: var(--clr-white-20);
     line-height: var(--lh-105);
-    margin-block: var(--sp-20);
+    margin-top: var(--sp-10);
+    margin-bottom: var(--sp-32);
     margin-inline: auto;
 
     @media (width > 62.5rem) {
+      margin-top: var(--sp-20);
       letter-spacing: var(--ls-neg-3);
     }
   }
@@ -452,8 +454,8 @@
     gap: 1rem;
     width: fit-content;
     white-space: nowrap;
-    font-family: var(--ff-geist-mono);
     font-size: var(--fs-va-btn-text);
+    font-family: var(--ff-geist-mono);
     background: var(--clr-gradient-horizontal);
     color: var(--clr-white-10);
     padding-inline: var(--pd-22);
@@ -604,17 +606,19 @@
     }
   }
 
-  img:not(.hero-image):not(#business-logo):not(.portfolio-hero-image) {
-    transition: transform 0.2s ease-in;
-    box-shadow:
-      0 6px 12px rgba(0, 0, 0, 0.4),
-      0 4px 8px rgba(0, 0, 0, 0.2),
-      0 0 0 1px rgba(255, 255, 255, 0.04);
-    z-index: 1;
-
-    &:hover {
-      transform: translateY(-1px);
+  @media (hover: hover) {
+    img:not(.hero-image):not(#business-logo):not(.portfolio-hero-image) {
+      transition: transform 0.2s ease-in;
+      box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.04);
       z-index: 1;
+
+      &:hover {
+        transform: translateY(-1px);
+        z-index: 1;
+      }
     }
   }
 
@@ -775,7 +779,7 @@
     background-color: var(--clr-black-10);
     font-size: var(--fs-nav-text);
     font-family: var(--ff-geist-mono);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-semibold);
     top: 100%;
     right: 0;
     left: 0;
@@ -801,6 +805,7 @@
     @media (width > 47.5rem) {
       position: relative;
       width: 100%;
+      font-weight: var(--fw-medium);
       background-color: inherit;
       padding: 0;
       z-index: 0;

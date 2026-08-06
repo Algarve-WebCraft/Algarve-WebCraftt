@@ -11,7 +11,7 @@ topper_heading: SOFTWARE
 hero_title: Algarve
 hero_span: WebCraft
 hero_text: A complete redesign that transformed Algarve WebCraft from a traditional web agency into a modern, personal service built around trust, craftsmanship and long-term partnerships.
-hero_text_inner: Algarve WebCraft
+hero_text_inner: the old Algarve WebCraft
 
 span_block_1: Full Redesign
 span_block_2: Brand Refresh
@@ -19,8 +19,8 @@ span_block_3: Case Studies
 span_block_4: Portfolio
 
 hero_image_image: /assets/images/algarve-home.webp
-hero_image_link: https://algarvewebcraft.com
-hero_image_alt: Algarve WebCraft website developer
+hero_image_link: https://oldalwebcraft.netlify.app
+hero_image_alt: Algarve WebCraft website
 
 challenge_text: As Algarve WebCraft grew, the original website no longer reflected the quality of the work or the experience clients could expect. The design felt dated, the messaging focused too heavily on features rather than people and it didn't clearly communicate what makes the business different. The goal was not simply to redesign the website. It was to completely rethink how the business presents itself online and create an experience that feels as personal as the service itself.
 

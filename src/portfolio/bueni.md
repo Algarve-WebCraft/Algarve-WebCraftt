@@ -4,7 +4,7 @@ layout: portfolio-template.njk
 title: "Bueni website | Algarve WebCraft"
 description: "Website created by Algarve WebCraft for the restaurant 'Bueni'"
 footer_text: "Want results like"
-footer_span: "Sergiu's?"
+footer_span: "Daniel's?"
 permalink: "/work/bueni/"
 
 topper_heading: HOSPITALITY
@@ -31,9 +31,9 @@ approach_tick_3: A history section telling the story behind Bueni and its founde
 approach_tick_4: A fully responsive design built for every device.
 
 testimonial_text: The whole process was very straightforward. Communication was excellent and the finished website looks far more professional than we expected.
-testimonial_span: Sergiu · Owner, Bueni
+testimonial_span: Daniel · Owner, Bueni
 
-built_text: A clean, elegant website that feels more like a premium dining experience than a typical neighbourhood restaurant. The design puts the food and atmosphere front and centre, using large photography, thoughtful typography and generous spacing to let the restaurant speak for itself. Visitors can browse the gallery, learn the story behind Bueni, discover upcoming events and quickly find contact details or directions. Everything is designed to be simple, fast and effortless on any device. Hosting, updates and ongoing support are all fully managed, allowing Sergiu and his team to focus entirely on running the restaurant.
+built_text: A clean, elegant website that feels more like a premium dining experience than a typical neighbourhood restaurant. The design puts the food and atmosphere front and centre, using large photography, thoughtful typography and generous spacing to let the restaurant speak for itself. Visitors can browse the gallery, learn the story behind Bueni, discover upcoming events and quickly find contact details or directions. Everything is designed to be simple, fast and effortless on any device. Hosting, updates and ongoing support are all fully managed, allowing Daniel and his team to focus entirely on running the restaurant.
 
 result_text: Bueni now has a website that reflects the quality of the experience customers can expect when they visit. Before stepping through the door, visitors can already get a feel for the restaurant's atmosphere, food and friendly personality.
 result_tick_1: A premium online presence that elevates the restaurant's brand and first impression.
