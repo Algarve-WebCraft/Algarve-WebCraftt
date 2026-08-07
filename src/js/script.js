@@ -43,6 +43,7 @@ const swup = new Swup({
   containers: ["#swup", "#swup-header", "#footer"],
   animateHistoryBrowsing: true,
   respectScroll: false,
+  animationSelector: false,
 
   plugins: [
     new SwupHeadPlugin({
@@ -181,7 +182,7 @@ function gsapSwupAnimations() {
     return gsap
       .timeline()
       .to(
-        ".transition-slide",
+        ".page-transition",
         {
           y: 30,
           duration: 0.4,
@@ -190,7 +191,7 @@ function gsapSwupAnimations() {
         0,
       )
       .to(
-        ".transition-slide",
+        ".page-transition",
         {
           opacity: 0,
           duration: 0.2,
@@ -204,7 +205,7 @@ function gsapSwupAnimations() {
     gsap
       .timeline()
       .fromTo(
-        ".transition-slide",
+        ".page-transition",
         {
           y: -30,
           opacity: 0,
@@ -217,7 +218,7 @@ function gsapSwupAnimations() {
         0,
       )
       .to(
-        ".transition-slide",
+        ".page-transition",
         {
           opacity: 1,
           duration: 0.4,
@@ -309,8 +310,6 @@ function gsapScrollAnimations() {
           ease: "power2.out",
           clearProps: "transform, opacity",
           scrollTrigger: {
-            scrub: addScrub ? 5 : false,
-            once: isReversible ? false : true,
             trigger: el,
             start: "top 70%",
           },
@@ -322,8 +321,6 @@ function gsapScrollAnimations() {
           clipPath: "inset(0 100% 0 0)",
           opacity: 1,
           duration: 0.85,
-          scrub: addScrub ? 5 : false,
-          once: isReversible ? false : true,
         };
         break;
       case "shutter-horizontal":
@@ -336,8 +333,6 @@ function gsapScrollAnimations() {
             ease: "power1.out",
             clearProps: "transform, opacity",
             scrollTrigger: {
-              scrub: addScrub ? 5 : false,
-              once: isReversible ? false : true,
               trigger: el,
               start: "top 80%",
             },
@@ -354,8 +349,6 @@ function gsapScrollAnimations() {
             ease: "power2.out",
             clearProps: "transform, opacity",
             scrollTrigger: {
-              scrub: addScrub ? 5 : false,
-              once: isReversible ? false : true,
               trigger: el,
               start: "top 75%",
             },
@@ -371,8 +364,6 @@ function gsapScrollAnimations() {
         trigger: el,
         start: "top 75%",
         end: "top 45%",
-        scrub: addScrub ? 5 : false,
-        once: isReversible ? false : true,
         toggleActions: isReversible
           ? "play none none reverse"
           : "play none none none",
@@ -410,7 +401,6 @@ function gsapScrollAnimations() {
       scrollTrigger: {
         trigger: group,
         start: triggerStartPoint,
-        once: true,
       },
     });
 
