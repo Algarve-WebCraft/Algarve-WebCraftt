@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const swup = new Swup({
   containers: ["#swup", "#swup-header", "#footer"],
-  /* animateHistoryBrowsing: true, */
+  animateHistoryBrowsing: true,
   respectScroll: false,
-  animationSelector: false,
+  animationSelector: false, 
 
   plugins: [
     new SwupHeadPlugin({
@@ -74,7 +74,7 @@ function runSwupHooks() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     gsapScrollAnimations();
-  }); 
+  });
 
   swup.hooks.on("visit:start", () => {
     document.documentElement.classList.remove("has-smooth-scroll");
@@ -92,7 +92,7 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  return;
+  /* return; */
 
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
@@ -246,7 +246,7 @@ function gsapRocketFlame() {
 function gsapScrollAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  return;
+  /* return; */
 
   setTimeout(() => {
     ScrollTrigger.refresh();

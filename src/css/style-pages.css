@@ -442,6 +442,11 @@
 
   .cmp-header-text-container--pg6-s1 {
     text-align: left;
+    margin-bottom: var(--sp-32);
+
+    @media (width > 62.5rem) {
+      margin-bottom: var(--sp-64);
+    }
 
     .cmp-topper-heading--portfolio {
       position: relative;
@@ -458,15 +463,16 @@
   }
 
   .sub-block-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 0.625rem;
-    flex-wrap: wrap;
     margin-top: 1rem;
-    justify-content: center;
+    place-items: center;
 
-    @media (width > 62.5rem) {
+    @media (width > 37.5rem) {
+      grid-template-columns: repeat(4, auto);
       margin-top: 1.75rem;
-      justify-content: left;
+      place-content: start;
     }
 
     span {
@@ -487,15 +493,6 @@
       &:hover {
         color: var(--clr-base-green);
         border: 1px solid var(--clr-base-green);
-      }
-
-      &:last-child,
-      &:nth-child(2) {
-        display: none;
-
-        @media (width > 37.5rem) {
-          display: unset;
-        }
       }
     }
   }
