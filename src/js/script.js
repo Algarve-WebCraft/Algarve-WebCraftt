@@ -24,17 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(() => {
     gsapOpeningHomeAnimations();
   });
+});
 
-  window.addEventListener("load", () => {
-    document.documentElement.classList.remove("is-loading");
+window.addEventListener("load", () => {
+  document.documentElement.classList.remove("is-loading");
 
-    setTimeout(() => {
-      requestAnimationFrame(() => {
-        gsapScrollAnimations();
-        ScrollTrigger.refresh();
-      });
-    }, 100);
-  });
+  setTimeout(() => {
+    gsapScrollAnimations();
+    ScrollTrigger.refresh();
+
+    document.documentElement.classList.add("has-smooth-scroll");
+  }, 200);
 });
 
 ///////////////////////////////////////////////////////////* Swup page navigation *////////////////////////////////////////////////////////////////////////////////////////*
@@ -43,7 +43,7 @@ const swup = new Swup({
   containers: ["#swup", "#swup-header", "#footer"],
   animateHistoryBrowsing: true,
   respectScroll: false,
-  animationSelector: false, 
+  animationSelector: false,
 
   plugins: [
     new SwupHeadPlugin({
