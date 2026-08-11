@@ -271,8 +271,10 @@
       0 12px 32px 0 rgba(40, 40, 40, 0.5),
       0 1px 0 0 rgba(255, 255, 255, 0.3) inset;
 
-    &:hover .card-two--price-container span:nth-child(3) {
-      font-size: 6rem;
+    @media (hover: hover) {
+      &:hover .card-two--price-container span:nth-child(3) {
+        font-size: 6rem;
+      }
     }
 
     & > span {
@@ -1329,16 +1331,16 @@
       0 0 84px oklch(72.882% 0.14333 254.32 / 0.18),
       0 0 128px oklch(65.74% 0.18218 261.963 / 0.1);
 
-    @media (width > 47.5rem) {
+    @media (width > 62.5rem) {
       box-shadow: unset;
-      filter: drop-shadow(0 0 12px oklch(81.239% 0.09981 247.028 / 0.5))
-        drop-shadow(0 0 84px oklch(72.882% 0.14333 254.32 / 0.35))
-        drop-shadow(0 0 128px oklch(65.74% 0.18218 261.963 / 0.2));
+      filter: drop-shadow(0 0 12px oklch(81.239% 0.09981 247.028 / 0.4))
+        drop-shadow(0 0 64px oklch(72.882% 0.14333 254.32 / 0.25))
+        drop-shadow(0 0 108px oklch(65.74% 0.18218 261.963 / 0.15));
     }
 
     @media (width > 62.5rem) {
       width: 70%;
-      border-radius: 15%;
+      border-radius: 20%;
       min-height: 550px;
     }
 
@@ -1355,7 +1357,7 @@
       height: 100%;
       border-radius: 3rem;
       object-fit: cover;
-      filter: brightness(0.7) saturate(0.75);
+      filter: brightness(0.7) saturate(0.8);
 
       @media (width > 47.5rem) {
         object-fit: contain;
@@ -1438,10 +1440,6 @@
         align-self: center;
         margin-top: 2rem;
         margin-bottom: min(15%, 4rem);
-
-        @media (width > 55rem) {
-          margin-bottom: 7rem;
-        }
 
         @media (width > 62.5rem) {
           font-size: clamp(var(--fs-13), 0.75vw + 0.3rem, var(--fs-16));

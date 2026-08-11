@@ -109,7 +109,7 @@
   }
 }
 
-@layer components {
+@layer components { 
   @font-face {
     font-display: swap;
     font-family: "Geist";
