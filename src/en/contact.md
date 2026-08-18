@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+
 lang: en
 
 contact_topper: "CONTACT"

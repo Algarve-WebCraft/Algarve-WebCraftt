@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+
 lang: en
 
 hero_topper: "HAND-CODED &nbsp;•&nbsp; HOSTED &nbsp;•&nbsp; MAINTAINED &nbsp;•&nbsp; €85/MO"

@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+
 lang: en
 
 work_topper: "RECENT WORK"

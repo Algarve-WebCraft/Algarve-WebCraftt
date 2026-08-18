@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+
 lang: en
 
 privacy_heading: "Privacy "

@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+
 lang: en
 
 terms_heading: "Terms of "
