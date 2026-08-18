@@ -289,7 +289,7 @@
 
     /* Colour */
 
-    --clr-base-green: rgb(72, 209, 224);
+    --clr-base-green: #48d1e0;
     --clr-base-blue: rgb(123, 95, 217);
     --clr-black-10: oklch(15.038% 0.00877 274.27);
     --clr-black-20: oklch(16.672% 0.04116 244.056);

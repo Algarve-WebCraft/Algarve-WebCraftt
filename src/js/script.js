@@ -5,7 +5,7 @@ import SwupPreloadPlugin from "@swup/preload-plugin";
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
-  runSwupHooks();
+  /* runSwupHooks(); */
   activateHamburgerMenu();
   updateActiveNavLink();
   initStickyHeader();
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordion();
   initContactForm();
   initSpeedColors();
-  gsapSwupAnimations();
+  /* gsapSwupAnimations(); */
   gsapRocketFlame();
   stopTransitionOnResize();
 
@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 
 ///////////////////////////////////////////////////////////* Swup page navigation *////////////////////////////////////////////////////////////////////////////////////////*
 
-const swup = new Swup({
+/* const swup = new Swup({
   containers: ["#swup", "#swup-header", "#footer"],
   animateHistoryBrowsing: true,
   respectScroll: false,
@@ -55,7 +55,7 @@ const swup = new Swup({
       preloadVisibleLinks: false,
     }),
   ],
-});
+}); */
 
 function runSwupHooks() {
   swup.hooks.on("page:view", () => {
@@ -92,7 +92,7 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  /* return; */
+  return;
 
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
@@ -110,7 +110,7 @@ function gsapOpeningHomeAnimations() {
     },
     {
       clipPath: "inset(0 0 0% 0)",
-      duration: 2,
+      duration: 1.5,
       ease: "power2.inOut",
     },
   )
@@ -121,7 +121,7 @@ function gsapOpeningHomeAnimations() {
         opacity: 0,
         duration: 2,
       },
-      "+=0.1",
+      "+=0.05",
     )
     .from(
       ".cmp-topper-heading",
@@ -130,13 +130,13 @@ function gsapOpeningHomeAnimations() {
         opacity: 0,
         duration: 2,
       },
-      "-=1.75",
+      "-=2",
     )
     .from(
       ".hero-btn-container a:first-of-type",
       {
         opacity: 0,
-        x: -50,
+        x: -25,
         duration: 2,
       },
       "-=1.5",
@@ -145,7 +145,7 @@ function gsapOpeningHomeAnimations() {
       ".hero-btn-container a:last-of-type",
       {
         opacity: 0,
-        x: 50,
+        x: 25,
         duration: 2,
         clearProps: "all",
       },
@@ -163,11 +163,11 @@ function gsapOpeningHomeAnimations() {
     .from(
       ".hero-image-container",
       {
-        y: 30,
+        y: 20,
         opacity: 0,
-        duration: 2,
+        duration: 2.5,
       },
-      "-=1",
+      "-=2",
     );
 }
 
@@ -246,7 +246,7 @@ function gsapRocketFlame() {
 function gsapScrollAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  /* return; */
+  return;
 
   setTimeout(() => {
     ScrollTrigger.refresh();
@@ -414,7 +414,7 @@ function gsapScrollAnimations() {
 function initLanguageChange() {
   const text = document.querySelectorAll(".language-card-text-container span");
   const buttons = document.querySelectorAll(
-    ".langauge-card-button-container button",
+    ".language-card-button-container button",
   );
 
   buttons.forEach((button) => {
@@ -435,14 +435,21 @@ function initLanguageChange() {
 }
 
 function initSpeedColors() {
-  document.querySelectorAll("[data-theme-button]").forEach((button) => {
+  const speedButtons = document.querySelectorAll("[data-theme-button]");
+
+  speedButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const theme = button.dataset.themeButton;
 
-      if (theme === document.documentElement.dataset.theme) return;
+      if (button.classList.contains("active")) return;
+
+      speedButtons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
 
       const applyTheme = () => {
         document.documentElement.dataset.theme = theme;
+        button.classList.add("active");
       };
 
       if (!document.startViewTransition) {
