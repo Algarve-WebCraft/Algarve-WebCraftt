@@ -1,27 +1,33 @@
 ---
+layout: about.njk
+lang: pt
+permalink: /pt/about/
+language_en: /about/
+language_pt: /pt/about/
 
-lang: en
+meet2_topper: "SOBRE"
+meet2_heading: "Um programador. "
+meet2_span: "Um cliente de cada vez."
+meet2_text: "Trabalhará diretamente comigo, a pessoa responsável por criar e desenvolver o seu website do início ao fim. Sem confusões. Apenas aconselhamento honesto, um serviço personalizado e um website de que se pode orgulhar."
 
-meet2_topper: "ABOUT"
-meet2_heading: "One developer. "
-meet2_span: "One client at a time."
-meet2_text: "You will work directly with the person designing and building your website from start to finish. No confusion. Just honest advice, personal service and a website you can be proud of."
-
-owner_img: "The Owner of Algarve Webcraft - Tayler Batista."
-owner_topper: "MEET THE FOUNDER"
-owner_heading: "The story behind "
+owner_img: "O fundador da Algarve WebCraft - Tayler Batista."
+owner_topper: "CONHEÇA O FUNDADOR"
+owner_heading: "A história por detrás da "
 owner_span: "Algarve WebCraft."
-owner_text_1: "Originally from South Africa, I have proudly called the beautiful town of Lagos home for the past five years. A few years ago, I decided to pursue my long-standing interest in programming. I started by studying software development but quickly discovered a real passion for building websites. What began as a way to break into tech soon became something I genuinely loved."
-owner_text_2: "Along the way, I realised how difficult it can be for new and small businesses, especially in a small town like Lagos, to justify spending thousands of euros on a website. Too often, the choice comes down to going without one or building it yourself with a page builder such as Wordpress or Wix. While those platforms can seem like the affordable option, they produce generic websites that are slower, risky, harder to manage and limited as a business grows."
-owner_text_3: "Instead of asking business owners to pay a large upfront cost, I created a simple monthly plan that includes everything from the initial design to hosting, updates, maintenance and future edits. That idea became Algarve WebCraft, giving small businesses a simple, affordable way to have a professional website without the usual high upfront costs."
+owner_text_1: "Originalmente da África do Sul, tenho tido o orgulho de chamar a bela cidade de Lagos de minha casa nos últimos cinco anos. Há alguns anos, decidi dedicar-me à programação, um interesse que mantinha há muito tempo. Comecei por estudar desenvolvimento de software, mas rapidamente descobri uma verdadeira paixão pela criação de websites. O que começou como uma forma de entrar no mundo da tecnologia tornou-se rapidamente em algo de que realmente gosto."
+owner_text_2: "Ao longo do caminho, percebi como pode ser difícil para empresas novas e pequenas, especialmente numa cidade pequena como Lagos, justificar o investimento de milhares de euros num website. Demasiadas vezes, a escolha acaba por ser ficar sem um ou fazê-lo por conta própria com um construtor de páginas como o Wordpress ou o Wix. Embora estas plataformas possam parecer a opção mais acessível, acabam por criar websites genéricos, mais lentos, com mais riscos, mais difíceis de gerir e limitados à medida que uma empresa cresce."
+owner_text_3: "Em vez de pedir aos proprietários de empresas que paguem um valor elevado à partida, criei um plano mensal simples que inclui tudo, desde o design inicial até ao alojamento, atualizações, manutenção e futuras alterações. Essa ideia deu origem à Algarve WebCraft, proporcionando às pequenas empresas uma forma simples e acessível de ter um website profissional sem os elevados custos iniciais habituais."
 
-math_topper: "WHAT I BELIEVE"
-math_heading: "Simple. Fair. "
-math_span: "Transparent."
-math_heading_1: "Hand-coded, always."
-math_text_1: "No page builders, no templates and no bloat. Every website is designed and hand-coded specifically for your business, making it faster, easier to maintain and built to last."
-math_heading_2: "Simple monthly pricing."
-math_text_2: "One predictable monthly payment covers your website, hosting, edits, support and ongoing maintenance. No hidden fees. No surprise invoices."
-math_heading_3: "You talk to me."
-math_text_3: "No ticket queues, no account managers and no chatbots. When you need something, you will speak directly to the person who designed and built your website."
+math_topper: "A MINHA VISÃO"
+math_heading: "Simples. Justo. "
+math_span: "Transparente."
+math_heading_1: "Sempre desenvolvido à mão."
+math_text_1: "Sem construtores de páginas, sem templates e sem código desnecessário. Cada website é desenhado e desenvolvido à mão especificamente para a sua empresa, tornando-o mais rápido e mais fácil de manter."
+math_heading_2: "Um preço mensal simples."
+math_text_2: "Um único pagamento mensal previsível cobre o seu website, alojamento, alterações, suporte e manutenção contínua. Sem custos ocultos. Sem faturas inesperadas."
+math_heading_3: "Fala diretamente comigo."
+math_text_3: "Sem filas de pedidos, gestores de conta ou chatbots. Quando precisar de alguma coisa, falará diretamente com a pessoa que desenhou e desenvolveu o seu website."
+
+footer_text: "Vamos criar o website"
+footer_span: 'que o seu negócio merece.'
 ---

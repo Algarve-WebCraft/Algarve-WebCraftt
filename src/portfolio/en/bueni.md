@@ -1,17 +1,20 @@
 ---
 layout: portfolio-template.njk
+lang: en
+permalink: /work/bueni/
+language_en: /work/bueni/
+language_pt: /pt/work/bueni/
 
 title: "Bueni website | Algarve WebCraft"
 description: "Website created by Algarve WebCraft for the restaurant 'Bueni'"
 footer_text: "Want results like"
 footer_span: "Daniel's?"
-permalink: "/work/bueni/"
 
 topper_heading: HOSPITALITY
 hero_title: Bueni
 hero_span:
 hero_text: A modern Mediterranean restaurant with a premium dining experience, now matched by a website that feels just as refined.
-hero_text_inner: Bueni
+hero_text_inner: Click below to discover Bueni for yourself
 
 span_block_1: Premium Design
 span_block_2: Event Booking
@@ -21,6 +24,13 @@ span_block_4: First Website
 hero_image_image: /assets/images/bueni-home.webp
 hero_image_link: https://test--bueni.netlify.app
 hero_image_alt: Bueni restaurant
+
+heading_1: The Challenge
+heading_2: The approach
+heading_3: What we built
+heading_4: The result
+previous: Previous Project
+next: Next Project
 
 challenge_text: Bueni had quickly built a fantastic reputation in Lagos for its open-flame cooking, Mediterranean dishes and welcoming atmosphere. But without a website, there was no easy way for new customers to discover the restaurant, learn about upcoming events or find essential information before visiting. The owner wanted their first website to showcase the personality of the restaurant while giving customers a simple place to explore everything Bueni has to offer.
 
@@ -42,8 +52,8 @@ result_tick_3: An events section making it simple for customers to enquire about
 result_tick_4: Clear contact details and interactive maps helping visitors plan their visit with ease.
 
 previous_project_text: The Garden
-previous_project_link: the-garden
+previous_project_link: /work/the-garden
 
 next_project_text: Algarve WebCraft
-next_project_link: algarve-webcraft
+next_project_link: /work/algarve-webcraft
 ---

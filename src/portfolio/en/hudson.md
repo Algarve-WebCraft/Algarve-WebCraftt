@@ -1,17 +1,20 @@
 ---
 layout: portfolio-template.njk
+lang: en
+permalink: /work/hudson/
+language_en: /work/hudson/
+language_pt: /pt/work/hudson/
 
 title: "Hudson website | Algarve WebCraft"
 description: "Website created by Algarve WebCraft for the design template 'Hudson Designers'"
 footer_text: "Want results like"
 footer_span: "a Designer?"
-permalink: "/work/hudson/"
 
 topper_heading: Concept Project
 hero_title: Hudson
 hero_span: Designers
 hero_text: A concept portfolio exploring how clean design, thoughtful typography and subtle animation can elevate a creative professional's online presence.
-hero_text_inner: Hudson Template
+hero_text_inner: Click below to discover the Hudson Template for yourself
 
 span_block_1: Premium Design
 span_block_2: Portfolio
@@ -21,6 +24,13 @@ span_block_4: Concept Project
 hero_image_image: /assets/images/hudson-home.webp
 hero_image_link: https://Algarve-WebCraft.github.io/Freelance-Portfolio/
 hero_image_alt: Hudson designer template
+
+heading_1: The Challenge
+heading_2: The approach
+heading_3: What we built
+heading_4: The result
+previous: Previous Project
+next: Next Project
 
 challenge_text: Hudson Designs was created as a concept for freelance designers looking for a simple, elegant way to showcase their work online. The goal was to demonstrate how a clean, minimal website can put a designer's portfolio front and centre without unnecessary distractions. The project focuses on thoughtful typography, subtle animation and carefully balanced layouts to create a professional first impression.
 
@@ -42,8 +52,8 @@ result_tick_3: A clear professional profile combining experience, testimonials a
 result_tick_4: Subtle animations and thoughtful interactions that create a polished, premium browsing experience.
 
 previous_project_text: Algarve WebCraft
-previous_project_link: algarve-webcraft
+previous_project_link: /work/algarve-webcraft
 
 next_project_text: The Garden
-next_project_link: the-garden
+next_project_link: /work/the-garden
 ---

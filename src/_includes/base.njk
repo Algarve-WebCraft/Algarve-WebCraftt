@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="{{ description }}">
     <meta name="theme-color" content="#0a0b0f">
+    <meta property="og:title" content="Algarve WebCraft | Hand-Coded Websites">
+    <meta property="og:description" content="Affordable, hand-coded websites for small businesses in Portugal.">
+    <meta property="og:image" content="https://algarvewebcraft.com/images/og-logo.webp">
+    <meta property="og:url" content="https://algarvewebcraft.com/">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/x-icon" href="/assets/logos/favicon-logo.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-logo-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-logo-32.png">
@@ -26,6 +31,12 @@
     <title>{{ title }}</title>
   </head>
   <body class="{{ body_class }}">
+    {% if lang == "en" %}
+      {% set language = en %}
+    {% else %}
+      {% set language = pt %}
+    {% endif %}
+    
     {% include "header.njk" %}
     {% include "decor.njk" %}
 

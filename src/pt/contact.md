@@ -1,30 +1,32 @@
 ---
+layout: contact.njk
+lang: pt
+permalink: /pt/contact/
+language_en: /contact/
+language_pt: /pt/contact/
 
-lang: en
+contact_topper: "CONTACTO"
+contact_heading: "Vamos criar algo "
+contact_span: "que valha a pena visitar."
+contact_text: "Conte-me um pouco sobre a sua empresa e o que procura no seu website. Vou analisar o seu pedido e responder-lhe em breve. Sem compromisso. Sem pressão."
 
-contact_topper: "CONTACT"
-contact_heading: "Let's build something "
-contact_span: "worth visiting."
-contact_text: "Tell me a little about your business and what you are looking for in your website. I'll review your enquiry and get back to you soon. No obligation. No pressure."
-
-contact_form: "Start your website"
-contact_label_1: "YOUR NAME"
+contact_form: "Comece o seu website"
+contact_label_1: "O SEU NOME"
 contact_label_2: "E-MAIL"
-contact_label_3: "BUSINESS NAME"
-contact_label_4: "CURRENT WEBSITE (OPTIONAL)"
-contact_label_5: "TELL ME ABOUT YOUR PROJECT"
-contact_btn: "Send Enquiry"
-contact_card-1-span: "E-MAIL"
-contact_card-1-heading: "Algarvewebcraft@gmail.com"
-contact_card-1-text: "The fastest way to reach us. I read every message and will reply within 24 hours."
-contact_card-2-span: "WHATSAPP"
-contact_card-2-heading: "(+351) 911 891 019"
-contact_card-2-text: "Have a question before getting started? Send a message on WhatsApp instead."
-contact_card-3-span: "WHERE WE ARE"
-contact_card-3-heading: "Lagos, Algarve, Portugal"
-contact_card-3-text: "Based on Portugal's beautiful south coast, working with small businesses across Europe."
-contact_card-4-span: "RESPONSE TIME"
-contact_card-4-heading: "Replies within 24h"
-contact_card-4-text: "You will always hear back from the person who will design and build your website. No ticket queues. No middlemen."
+contact_label_3: "NOME DA EMPRESA"
+contact_label_4: "WEBSITE ATUAL (OPCIONAL)"
+contact_label_5: "FALE-ME SOBRE O SEU PROJETO"
+contact_label_5_placeholder: "Conte-me um pouco sobre o seu negócio e o que pretende alcançar com o seu website."
+contact_btn: "Enviar Pedido"
+contact_card_1_span: "E-MAIL"
+contact_card_1_text: "A forma mais rápida de entrar em contacto connosco. Leio todas as mensagens e responderei no prazo de 24 horas."
+contact_card_2_text: "Tem alguma dúvida antes de começar? Envie-me uma mensagem pelo WhatsApp."
+contact_card_3_span: "ONDE ESTAMOS"
+contact_card_3_text: "Com base na bela costa sul de Portugal, trabalho com pequenas empresas em toda a Europa."
+contact_card_4_span: "TEMPO DE RESPOSTA"
+contact_card_4_heading: "Respostas em 24h"
+contact_card_4_text: "Receberá sempre uma resposta da pessoa que irá desenhar e desenvolver o seu website. Sem filas de pedidos. Sem intermediários."
 
+footer_text: "Vamos criar o website"
+footer_span: "que o seu negócio merece."
 ---

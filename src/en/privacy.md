@@ -1,6 +1,9 @@
 ---
-
+layout: privacy.njk
 lang: en
+permalink: /privacy/
+language_en: /privacy/
+language_pt: /pt/privacy/
 
 privacy_heading: "Privacy "
 privacy_span: "Policy"
@@ -22,13 +25,13 @@ privacy_heading_1: "Introduction"
 privacy_text_1: "At <strong>Algarve WebCraft</strong>, your privacy matters — even if we don’t collect any personal data directly through this website. This policy outlines what little information may be collected indirectly and how we handle it."
 privacy_heading_2: "What We Collect"
 privacy_text_2: "We do not actively collect, store, or process any personal data through this website. There are:"
-privacy_2_li-1: "No contact forms"
-privacy_2_li-2: "No user accounts or logins"
-privacy_2_li-3: "No analytics or tracking tools"
-privacy_2_li-4: "No advertising scripts or third-party marketing pixels"
+privacy_2_li_1: "No contact forms"
+privacy_2_li_2: "No user accounts or logins"
+privacy_2_li_3: "No analytics or tracking tools"
+privacy_2_li_4: "No advertising scripts or third-party marketing pixels"
 privacy_heading_3: "How You Can Contact U"
 privacy_text_3: "If you choose to reach out, you can do so via:"
-privacy_3_li_1: "Email:"
+privacy_3_li_1: "Email: "
 privacy_3_li_2: "WhatsApp: Contact link provided on the website"
 privacy_3_text: "When you contact us, we’ll only use your information (such as your email or phone number) to respond to your inquiry. We don’t store or share these details beyond that purpose"
 privacy_heading_4: "Hosting and Automatic Data"
@@ -52,8 +55,9 @@ privacy_heading_10: "Changes to This Policy"
 privacy_text_10: "We may update this privacy policy if our website or communication practices change. The latest version will always be available on this page with an updated date at the top."
 privacy_heading_11: "Contact"
 privacy_text_11: "If you have any questions or concerns about this privacy policy, please get in touch:"
-privacy_5_li_1: "Date and time of visit"
 privacy_5_li_2: "Email: "
 privacy_5_text: "Location: Lagos, Portugal"
 
+footer_text: "Let's build the website your business"
+footer_span: "deserves."
 ---

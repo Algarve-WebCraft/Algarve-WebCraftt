@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "skip": "Pular para o conteúdo principal",
+    "logo_link": "/pt/",
+    "home": {
+      "text": "Início",
+      "url": "/pt/"
+    },
+    "about": {
+      "text": "Sobre",
+      "url": "/pt/about/"
+    },
+    "work": {
+      "text": "Trabalho Recente",
+      "url": "/pt/work/"
+    },
+    "pricing": {
+      "text": "Preços",
+      "url": "/pt/pricing/"
+    },
+    "contact": {
+      "text": "Contacto",
+      "url": "/pt/contact/"
+    },
+    "button": {
+      "link": "/pt/contact/",
+      "name": "COMECE AGORA"
+    }
+  },
+
+  "footer": {
+    "logo_link": "/pt/",
+    "topper": "PRONTO QUANDO VOCÊ ESTIVER",
+    "text_1": "Uma conversa rápida. Sem compromisso. ",
+    "text_2": "€85/mês se for adequado.",
+    "link": "/pt/contact/",
+    "link_name": "COMECE O SEU WEBSITE",
+    "bottom_text_1": "Vamos construir algo ",
+    "bottom_text_2": "que vale a pena visitar.",
+    "design": "Design e desenvolvimento por Algarve WebCraft",
+    "privacy": {
+      "link": "/pt/privacy/",
+      "name": "Política de Privacidade"
+    },
+    "terms": {
+      "link": "/pt/terms/",
+      "name": "Termos e Condições"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "skip": "Skip to main content",
+    "logo_link": "/",
+    "home": {
+      "text": "Home",
+      "url": "/"
+    },
+    "about": {
+      "text": "About",
+      "url": "/about/"
+    },
+    "work": {
+      "text": "Recent Work",
+      "url": "/work/"
+    },
+    "pricing": {
+      "text": "Pricing",
+      "url": "/pricing/"
+    },
+    "contact": {
+      "text": "Contact",
+      "url": "/contact/"
+    },
+    "button": {
+      "link": "/contact/",
+      "name": "START NOW"
+    }
+  },
+
+  "footer": {
+    "logo_link": "/",
+    "topper": "READY WHEN YOU ARE",
+    "text_1": "A quick chat. Zero commitment. ",
+    "text_2": " €85/month if it's a fit.",
+    "link": "/contact/",
+    "link_name": "START YOUR WEBSITE",
+    "bottom_text_1": "Lets build something ",
+    "bottom_text_2": "worth visiting.",
+    "design": "Design and development by Algarve WebCraft",
+    "privacy": {
+      "link": "/privacy/",
+      "name": "Privacy Policy"
+    },
+    "terms": {
+      "link": "/terms/",
+      "name": "Terms & Conditions"
+    }
+  }
+}

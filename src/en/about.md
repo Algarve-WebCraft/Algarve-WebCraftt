@@ -1,6 +1,9 @@
 ---
-
+layout: about.njk
 lang: en
+permalink: /about/
+language_en: /about/
+language_pt: /pt/about/
 
 meet2_topper: "ABOUT"
 meet2_heading: "One developer. "
@@ -24,4 +27,7 @@ math_heading_2: "Simple monthly pricing."
 math_text_2: "One predictable monthly payment covers your website, hosting, edits, support and ongoing maintenance. No hidden fees. No surprise invoices."
 math_heading_3: "You talk to me."
 math_text_3: "No ticket queues, no account managers and no chatbots. When you need something, you will speak directly to the person who designed and built your website."
+
+footer_text: "Let's build the website your business"
+footer_span: "deserves."
 ---

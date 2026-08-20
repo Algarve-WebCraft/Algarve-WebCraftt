@@ -1,17 +1,20 @@
 ---
 layout: portfolio-template.njk
+lang: en
+permalink: /work/the-garden/
+language_en: /work/the-garden/
+language_pt: /pt/work/the-garden/
 
 title: "The Garden website | Algarve WebCraft"
 description: "Website created by Algarve WebCraft for the restaurant 'The Garden'"
 footer_text: "Want results like"
 footer_span: "Kevin's?"
-permalink: "/work/the-garden/"
 
 topper_heading: HOSPITALITY
 hero_title: The Garden
 hero_span: Bar & Grill
 hero_text: Fourteen years of great food, great memories and yet no website. We changed that.
-hero_text_inner: The Garden
+hero_text_inner: Click below to discover The Garden for yourself
 
 span_block_1: Digital Menu
 span_block_2: Photo Gallery
@@ -21,6 +24,13 @@ span_block_4: First Website
 hero_image_image: /assets/images/the-garden-home.webp
 hero_image_link: https://www.thegardenlagos.pt
 hero_image_alt: The Garden restaurant
+
+heading_1: The Challenge
+heading_2: The approach
+heading_3: What we built
+heading_4: The result
+previous: Previous Project
+next: Next Project
 
 challenge_text: The Garden had built a fantastic reputation over the past 14 years without ever having a website. Most customers discovered the restaurant through word of mouth or just by walking past. While that worked well, there was no central place for visitors to view the menu, browse photos of the restaurant or learn its story before visiting. The owner wanted their first website to reflect the atmosphere they had spent years creating, while making it easier for new customers to discover everything the restaurant has to offer.
 
@@ -41,9 +51,9 @@ result_tick_2: An extensive photo gallery highlighting the restaurant, its story
 result_tick_3: Google maps and contact information to make planning a visit effortless.
 result_tick_4: A fast, modern website that gives The Garden an online presence to match its reputation.
 
-previous_project_text: Hudson designs
-previous_project_link: hudson
+previous_project_text: Hudson designers
+previous_project_link: /work/hudson
 
 next_project_text: Bueni
-next_project_link: bueni
+next_project_link: /work/bueni
 ---

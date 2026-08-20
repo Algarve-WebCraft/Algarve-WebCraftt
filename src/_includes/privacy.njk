@@ -1,0 +1,118 @@
+---
+title: 'Privacy | Algarve WebCraft'
+description: 'The privacy policy of Algarve Webcraft.'
+body_class: 'secondary'
+footer_text: "Let's build the website your business"
+footer_span: 'deserves.'
+---
+
+{% extends "base.njk" %}
+{% block content %}
+
+<section id="privacy-page" class="cmp-main-section" aria-labelledby="privacy-heading">
+  <div class="wrapper wrapper--tablet-48 terms-privacy-pages-flex">
+
+    <div class="cmp-header-text-container" data-animate="fade-in">
+      <h1 id="privacy-heading" class="cmp-hero-heading">{{ privacy_heading }}<span class="cmp-heading-span cmp-heading-span--hero cmp-gradient-text">{{ privacy_span }}</span></h1>
+    </div>
+
+    <p><strong>{{ privacy_time_1 }}</strong>{{ privacy_time_2 }}</p>
+
+    <nav>
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">{{ privacy_nav_heading }}</h2>
+
+      <ul class="cmp-main-text cmp-main-text--terms-privacy-nav__list">
+        <li><a href="#introduction">{{ privacy_nav_li_1 }}</a></li>
+        <li><a href="#collect">{{ privacy_nav_li_2 }}</a></li>
+        <li><a href="#how-to-contact">{{ privacy_nav_li_3 }}</a></li>
+        <li><a href="#hosting">{{ privacy_nav_li_4 }}</a></li>
+        <li><a href="#cookies">{{ privacy_nav_li_5 }}</a></li>
+        <li><a href="#data">{{ privacy_nav_li_6 }}</a></li>
+        <li><a href="#links">{{ privacy_nav_li_7 }}</a></li>
+        <li><a href="#children">{{ privacy_nav_li_8 }}</a></li>
+        <li><a href="#rights">{{ privacy_nav_li_9 }}</a></li>
+        <li><a href="#changes">{{ privacy_nav_li_10 }}</a></li>
+        <li><a href="#contact">{{ privacy_nav_li_11 }}</a></li>
+      </ul>
+    </nav>
+
+    <div id="introduction" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">1. {{ privacy_heading_1 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_1 | safe }}</p>
+    </div>
+
+    <div id="collect" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">2. {{ privacy_heading_2 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_2 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ privacy_2_li_1 }}</li>
+        <li>{{ privacy_2_li_2 }}</li>
+        <li>{{ privacy_2_li_3 }}</li>
+        <li>{{ privacy_2_li_4 }}</li>
+      </ul>
+    </div>
+
+    <div id="how-to-contact" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">3. {{ privacy_heading_3 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_3 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ privacy_3_li_1 }}<a href="mailto:algarvewebcraft@gmail.com">algarvewebcraft@gmail.com</a></li>
+        <li>{{ privacy_3_li_2 }}</li>
+      </ul>
+      <p class="cmp-main-text">{{ privacy_3_text }}</p>
+    </div>
+
+    <div id="hosting" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">4. {{ privacy_heading_4 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_4 | safe }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ privacy_4_li_1 }}</li>
+        <li>{{ privacy_4_li_2 }}</li>
+        <li>{{ privacy_4_li_3 }}</li>
+        <li>{{ privacy_4_li_4 }}</li>
+      </ul>
+      <p class="cmp-main-text">{{ privacy_4_text }}</p>
+    </div>
+
+    <div id="cookies" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">5. {{ privacy_heading_5 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_5 }}</p>
+    </div>
+
+    <div id="data" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">6. {{ privacy_heading_6 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_6 }}</p>
+    </div>
+
+    <div id="links" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">7. {{ privacy_heading_7 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_7 }}</p>
+    </div>
+
+    <div id="children" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">8. {{ privacy_heading_8 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_8 }}</p>
+    </div>
+
+    <div id="rights" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">9. {{ privacy_heading_9 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_9 }}</p>
+    </div>
+
+    <div id="changes" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">10. {{ privacy_heading_10 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_10 }}</p>
+    </div>
+
+    <div id="contact" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">11. {{ privacy_heading_11 }}</h2>
+      <p class="cmp-main-text">{{ privacy_text_11 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ privacy_5_li_2 }}<a href="mailto:algarvewebcraft@gmail.com">algarvewebcraft@gmail.com</a></li>
+        <li>{{ privacy_5_text }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

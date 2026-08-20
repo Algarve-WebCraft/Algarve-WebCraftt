@@ -1,0 +1,138 @@
+---
+title: 'Terms of Service | Algarve WebCraft'
+description: 'The terms of service of Algarve Webcraft.'
+body_class: 'secondary'
+footer_text: "Let's build the website your business"
+footer_span: 'deserves.'
+---
+
+{% extends "base.njk" %}
+{% block content %}
+
+<section id="terms-page" class="cmp-main-section" aria-labelledby="terms-heading">
+  <div class="wrapper wrapper--tablet-48 terms-privacy-pages-flex">
+
+    <div class="cmp-header-text-container" data-animate="fade-in">
+      <h1 id="terms-heading" class="cmp-hero-heading">{{ terms_heading }}<span class="cmp-heading-span cmp-heading-span--hero cmp-gradient-text">{{ terms_span }}</span></h1>
+    </div>
+
+    <p><strong>{{ terms_time_1 }}</strong>{{ terms_time_2 }}</p>
+
+    <nav>
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">{{ terms_nav_heading }}</h2>
+
+      <ul class="cmp-main-text cmp-main-text--terms-privacy-nav__list">
+        <li><a href="#about-us">{{ terms_nav_li_1 }}</a></li>
+        <li><a href="#website-use">{{ terms_nav_li_2 }}</a></li>
+        <li><a href="#services-agreement">{{ terms_nav_li_3 }}</a></li>
+        <li><a href="#intellectual-property">{{ terms_nav_li_4 }}</a></li>
+        <li><a href="#hosting">{{ terms_nav_li_5 }}</a></li>
+        <li><a href="#communication">{{ terms_nav_li_6 }}</a></li>
+        <li><a href="#pricing-payments">{{ terms_nav_li_7 }}</a></li>
+        <li><a href="#cancellation">{{ terms_nav_li_8 }}</a></li>
+        <li><a href="#warranties">{{ terms_nav_li_9 }}</a></li>
+        <li><a href="#liability">{{ terms_nav_li_10 }}</a></li>
+        <li><a href="#governing-law">{{ terms_nav_li_11 }}</a></li>
+        <li><a href="#changes">{{ terms_nav_li_12 }}</a></li>
+        <li><a href="#contact">{{ terms_nav_li_13 }}</a></li>
+      </ul>
+    </nav>
+
+    <div id="about-us" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">1. {{ terms_heading_1 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_1 | safe }}</p>
+    </div>
+
+    <div id="website-use" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">2. {{ terms_heading_2 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_2 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ terms_1_li_1 }}</li>
+        <li>{{ terms_1_li_2 }}</li>
+        <li>{{ terms_1_li_3 }}</li>
+      </ul>
+      <p class="cmp-main-text">{{ terms_1_text }}</p>
+    </div>
+
+    <div id="services-agreement" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">3. {{ terms_heading_3 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_3 }}</p>
+    </div>
+
+    <div id="intellectual-property" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">4. {{ terms_heading_4 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_4 }}</p>
+    </div>
+
+    <div id="hosting" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">5. {{ terms_heading_5 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_5 | safe }}</p>
+    </div>
+
+    <div id="communication" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">6. {{ terms_heading_6 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_6 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ terms_2_li_1 }}<a href="mailto:algarvewebcraft@gmail.com">algarvewebcraft@gmail.com</a></li>
+        <li>{{ terms_2_li_2 }}</li>
+      </ul>
+      <p class="cmp-main-text">{{ terms_6_text | safe }}</p>
+    </div>
+
+    <div id="pricing-payments" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">7. {{ terms_heading_7 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_7 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ terms_3_li_1 | safe }}</li>
+        <li>{{ terms_3_li_2 | safe }}</li>
+      </ul>
+      <p class="cmp-main-text">{{ terms_7_text }}</p>
+    </div>
+
+    <div id="cancellation" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">8. {{ terms_heading_8 }}</h2>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ terms_4_li_1 | safe }}</li>
+        <li>{{ terms_4_li_2 | safe }}</li>
+      </ul>
+      <p class="cmp-main-text">{{ terms_8_text }}</p>
+    </div>
+
+    <div id="warranties" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">9. {{ terms_heading_9 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_9 }}</p>
+    </div>
+
+    <div id="liability" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">10. {{ terms_heading_10 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_10 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ terms_5_li_1 }}</li>
+        <li>{{ terms_5_li_2 }}</li>
+        <li>{{ terms_5_li_3 }}</li>
+        <li>{{ terms_5_li_4 }}</li>
+      </ul>
+    </div>
+
+    <div id="governing-law" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">11. {{ terms_heading_11 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_11 | safe }}</p>
+    </div>
+
+    <div id="changes" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">12. {{ terms_heading_12 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_12 }}</p>
+    </div>
+
+    <div id="contact" class="terms-privacy-section">
+      <h2 class="cmp-sub-heading cmp-sub-heading--terms-privacy">13. {{ terms_heading_13 }}</h2>
+      <p class="cmp-main-text">{{ terms_text_13 }}</p>
+      <ul class="cmp-main-text terms-privacy-list">
+        <li>{{ terms_6_li_1 }}<a href="mailto:algarvewebcraft@gmail.com">algarvewebcraft@gmail.com</a></li>
+        <li>{{ terms_6_li_2 }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

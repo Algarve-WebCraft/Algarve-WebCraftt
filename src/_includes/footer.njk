@@ -7,30 +7,30 @@
       </video>
 
       <div class="cmp-header-text-container footer-video__text"> 
-        <span class="cmp-topper-heading">READY WHEN YOU ARE</span>
+        <span class="cmp-topper-heading">{{ language.footer.topper }}</span>
         <h2 class="cmp-main-heading">{{ footer_text }} <span class="cmp-heading-span cmp-gradient-text">{{ footer_span }}</span></h2>
-        <p class="cmp-main-text">A quick chat. Zero commitment. <br> €85/month if it's a fit.</p>
-        <a href="/contact/" class="cmp-main-btn cmp-main-btn--footer-btn">START YOUR WEBSITE</a>
+        <p class="cmp-main-text">{{ language.footer.text_1 }}<br>{{ language.footer.text_2 }}</p>
+        <a href="{{ language.footer.link }}" class="cmp-main-btn cmp-main-btn--footer-btn">{{ language.footer.link_name }}</a>
       </div>
     </div>
 
     <div class="footer-container">
       <div class="footer-business-logo-container">
-        <a href="/">
+        <a href="{{ language.footer.logo_link }}">
           <img src="/assets/logos/business-logo-white.webp" decoding="async" loading="lazy" width="250" height="67" alt="Algarve Webcraft's logo.">
         </a>
-        <p class="cmp-main-heading ">Lets build something <br> <span class="cmp-heading-span cmp-gradient-text">worth visiting.</span></p>
+        <p class="cmp-main-heading ">{{ language.footer.bottom_text_1 }}<br> <span class="cmp-heading-span cmp-gradient-text">{{ language.footer.bottom_text_2 }}</span></p>
       </div>
 
       <nav id="footer-navigation" class="footer-nav-links-container" aria-labelledby="footer-nav-links">
         <h3 id="footer-nav-links">Links</h3>
 
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/work/">Recent Work</a></li>
-          <li><a href="/pricing/">Pricing</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="{{ language.nav.home.url }}">{{ language.nav.home.text }}</a></li>
+          <li><a href="{{ language.nav.about.url }}">{{ language.nav.about.text }}</a></li>
+          <li><a href="{{ language.nav.work.url }}">{{ language.nav.work.text }}</a></li>
+          <li><a href="{{ language.nav.pricing.url }}">{{ language.nav.pricing.text }}</a></li>
+          <li><a href="{{ language.nav.contact.url }}">{{ language.nav.contact.text }}</a></li>
         </ul>
       </nav>
 
@@ -84,12 +84,12 @@
         <span id="year"></span>
 
         <div class="footer-privacy-container">
-          <a href="/privacy/">Privacy Policy</a>
+          <a href="{{ language.footer.privacy.link }}">{{ language.footer.privacy.name }}</a>
           <span>|</span>
-          <a href="/terms/">Terms of Use</a>
+          <a href="{{ language.footer.terms.link }}">{{ language.footer.terms.name }}</a>
         </div>
 
-        <span>Design and development by Algarve WebCraft</span>
+        <span>{{ language.footer.design }}</span>
       </div>
     </div> 
 

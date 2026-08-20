@@ -16,9 +16,9 @@ footer_span: 'deserves.'
   <div class="wrapper wrapper--tablet-48">
 
     <div class="cmp-header-text-container cmp-header-text-container--pg1-hero">
-      <span class="cmp-topper-heading">RECENT WORK</span>
-      <h1 id="hero-section" class="cmp-hero-heading">Sites that make small businesses <br><span class="cmp-heading-span cmp-heading-span--hero cmp-gradient-text">look serious.</span></h1>
-      <p class="cmp-main-text">Every website is thoughtfully designed and hand-coded with performance, usability and long-term growth in mind, helping customers feel confident from the very first click.</p>
+      <span class="cmp-topper-heading">{{ work_topper }}</span>
+      <h1 id="hero-section" class="cmp-hero-heading">{{ work_heading }}<br><span class="cmp-heading-span cmp-heading-span--hero cmp-gradient-text">{{ work_span }}</span></h1>
+      <p class="cmp-main-text">{{ work_text }}</p>
     </div>
 
   </div>
@@ -33,52 +33,49 @@ footer_span: 'deserves.'
 
     <div class="work-section-container">
       <div class="work-card" data-animate="shutter-horizontal">
-        <a href="/work/the-garden/">
-          <img src="/assets/images/the-garden-home-small.webp" width="650" height="312" loading="lazy" decoding="async" alt="The case study for the resaurant The Garden, created by Algarve Webcraft.">
+        <a href="{{ garden_link }}">
+          <img src="/assets/images/the-garden-home-small.webp" width="650" height="312" loading="lazy" decoding="async" alt="{{ img_text_1 }}">
         
           <div class="work-card__text">
-            <span class="cmp-topper-heading">Restaurant</span>
+            <span class="cmp-topper-heading">{{ work_restaurant }}</span>
             <h2>The Garden Bar & Grill</h2>
-            <p>Restaurant based in Lagos.</p>
+            <p>{{ work_restaurant_text }}</p>
           </div>
         </a>
       </div>
 
       <div class="work-card" data-animate="shutter-horizontal">
-        <a href="/work/bueni/">
-          <img src="/assets/images/bueni-home-small.webp" width="650" height="317" loading="lazy" decoding="async" alt="The case study for the restaurant Bueni, created by Algarve Webcraft.">
+        <a href="{{ bueni_link }}">
+          <img src="/assets/images/bueni-home-small.webp" width="650" height="317" loading="lazy" decoding="async" alt="{{ img_text_2 }}">
         
-
           <div class="work-card__text">
-            <span class="cmp-topper-heading">Restaurant</span>
+            <span class="cmp-topper-heading">{{ work_restaurant }}</span>
             <h2>Bueni</h2>
-            <p>Restaurant based in Lagos.</p>
+            <p>{{ work_restaurant_text }}</p>
           </div>
         </a>
       </div>
 
       <div class="work-card" data-animate="shutter-horizontal">
-        <a href="/work/algarve-webcraft/">
-          <img src="/assets/images/algarve-home-small.webp" width="650" height="297" loading="lazy" decoding="async" alt="The case study for the old website for ALgarve Webcraft, created by Algarve Webcraft.">
+        <a href="{{ algarve_link }}">
+          <img src="/assets/images/algarve-home-small.webp" width="650" height="297" loading="lazy" decoding="async" alt="{{ img_text_3 }}">
         
-
           <div class="work-card__text">
-            <span class="cmp-topper-heading">Software</span>
+            <span class="cmp-topper-heading">{{ work_software }}</span>
             <h2>Algarve Webcraft</h2>
-            <p>Software company based in Lagos.</p>
+            <p>{{ work_software_text }}</p>
           </div>
         </a>
       </div>
 
       <div class="work-card" data-animate="shutter-horizontal">
-        <a href="/work/hudson/">
-          <img src="/assets/images/hudson-home-small.webp" width="650" height="302" loading="lazy" decoding="async" alt="The case study for the designer template, Hudson designs, created by Algarve Webcraft.">
+        <a href="{{ hudson_link }}">
+          <img src="/assets/images/hudson-home-small.webp" width="650" height="302" loading="lazy" decoding="async" alt="{{ img_text_4 }}">
         
-
           <div class="work-card__text">
-            <span class="cmp-topper-heading">Freelancer</span>
+            <span class="cmp-topper-heading">{{ work_freelance }}</span>
             <h2>Hudson Designer profile</h2>
-            <p>Freelancer portfolio</p>
+            <p>{{ work_freelance_text }}</p>
           </div>
         </a>
       </div>

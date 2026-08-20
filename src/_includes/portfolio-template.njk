@@ -12,7 +12,7 @@
       <span class="cmp-topper-heading cmp-topper-heading--portfolio">{{ topper_heading }}</span>
       <h1 id="hero-section" class="cmp-hero-heading">{{ hero_title }} <span class="cmp-heading-span cmp-heading-span--hero cmp-gradient-text">{{ hero_span }}</span></h1>
       <p class="cmp-main-text">{{ hero_text }}</p>
-      <p class="cmp-main-text">Click below to discover {{ hero_text_inner }} for yourself</p>
+      <p class="cmp-main-text">{{ hero_text_inner }}</p>
 
       <div class="sub-block-container">
         <span>{{ span_block_1 }}</span>
@@ -37,12 +37,12 @@
 
     <div class="content-container">
       <div class="content-text" data-animate="slide-left">
-        <h2>The Challenge</h2>
+        <h2>{{ heading_1 }}</h2>
         <p class="cmp-main-text">{{ challenge_text | safe }}</p>
       </div>
 
       <div class="content-text" data-animate="slide-left">
-        <h2>The approach</h2>
+        <h2>{{ heading_2 }}</h2>
         <p class="cmp-main-text">{{ approach_text | safe }}</p>
 
         <ul class="content-text__svg-container">
@@ -86,12 +86,12 @@
       </div>
 
       <div class="content-text" data-animate="slide-left">
-        <h2>What we built</h2>
+        <h2>{{ heading_3 }}</h2>
         <p class="cmp-main-text">{{ built_text | safe }}</p>
       </div>
 
       <div class="content-text" data-animate="slide-left">
-        <h2>The result</h2>
+        <h2>{{ heading_4}}</h2>
         <p class="cmp-main-text">{{ result_text | safe }}</p>
 
         <ul class="content-text__svg-container">
@@ -132,13 +132,13 @@
 
     <div class="next-block">
       <div class="next-block__flex" data-animate="slide-left">
-        <span>Previous Project</span>
-        <a href="/work/{{ previous_project_link }}/">← {{ previous_project_text }}</a>
+        <span>{{ previous }}</span>
+        <a href="{{ previous_project_link }}/">← {{ previous_project_text }}</a>
       </div>
 
       <div class="next-block__flex" data-animate="slide-right">
-        <span>Next Project</span>
-        <a href="/work/{{ next_project_link }}/">{{ next_project_text }} →</a>
+        <span>{{ next }}</span>
+        <a href="{{ next_project_link }}/">{{ next_project_text }} →</a>
       </div>
     </div>
   </div>

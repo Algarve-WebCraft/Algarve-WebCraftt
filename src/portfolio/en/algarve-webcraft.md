@@ -1,17 +1,20 @@
 ---
 layout: portfolio-template.njk
+lang: en
+permalink: /work/algarve-webcraft/
+language_en: /work/algarve-webcraft/
+language_pt: /pt/work/algarve-webcraft/
 
 title: "Algarve WebCraft website | Algarve WebCraft"
 description: "Website created by Algarve WebCraft for itself"
 footer_text: "Want results like"
 footer_span: "Tayler's?"
-permalink: "/work/algarve-webcraft/"
 
 topper_heading: SOFTWARE
 hero_title: Algarve
 hero_span: WebCraft
 hero_text: A complete redesign that transformed Algarve WebCraft from a traditional web agency into a modern, personal service built around trust, craftsmanship and long-term partnerships.
-hero_text_inner: the old Algarve WebCraft
+hero_text_inner: Click below to discover the old Algarve WebCraft for yourself
 
 span_block_1: Full Redesign
 span_block_2: Brand Refresh
@@ -21,6 +24,13 @@ span_block_4: Portfolio
 hero_image_image: /assets/images/algarve-home.webp
 hero_image_link: https://oldalwebcraft.netlify.app
 hero_image_alt: Algarve WebCraft website
+
+heading_1: The Challenge
+heading_2: The approach
+heading_3: What we built
+heading_4: The result
+previous: Previous Project
+next: Next Project
 
 challenge_text: As Algarve WebCraft grew, the original website no longer reflected the quality of the work or the experience clients could expect. The design felt dated, the messaging focused too heavily on features rather than people and it didn't clearly communicate what makes the business different. The goal was not simply to redesign the website. It was to completely rethink how the business presents itself online and create an experience that feels as personal as the service itself.
 
@@ -42,8 +52,8 @@ result_tick_3: Clear and transparent pricing that makes choosing the right plan 
 result_tick_4: A polished user experience demonstrating the same craftsmanship and attention to detail clients receive in every project.
 
 previous_project_text: Bueni
-previous_project_link: bueni
+previous_project_link: /work/bueni
 
-next_project_text: Hudson Design
-next_project_link: hudson
+next_project_text: Hudson Designers
+next_project_link: /work/hudson
 ---
