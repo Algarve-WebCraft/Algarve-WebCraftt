@@ -5,7 +5,7 @@ import SwupPreloadPlugin from "@swup/preload-plugin";
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* runSwupHooks(); */
+  runSwupHooks();
   activateHamburgerMenu();
   updateActiveNavLink();
   initStickyHeader();
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordion();
   initContactForm();
   initSpeedColors();
-  /* gsapSwupAnimations(); */
+  gsapSwupAnimations();
   gsapRocketFlame();
   stopTransitionOnResize();
 
@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 
 ///////////////////////////////////////////////////////////* Swup page navigation *////////////////////////////////////////////////////////////////////////////////////////*
 
-/* const swup = new Swup({
+const swup = new Swup({
   containers: ["#swup", "#swup-header", "#footer"],
   animateHistoryBrowsing: true,
   respectScroll: false,
@@ -55,7 +55,7 @@ window.addEventListener("load", () => {
       preloadVisibleLinks: false,
     }),
   ],
-}); */
+});
 
 function runSwupHooks() {
   swup.hooks.on("page:view", () => {
@@ -92,7 +92,7 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  return;
+  /* return; */
 
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
@@ -246,7 +246,7 @@ function gsapRocketFlame() {
 function gsapScrollAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  return;
+  /* return; */
 
   setTimeout(() => {
     ScrollTrigger.refresh();
