@@ -20,28 +20,29 @@
             <li><a href="{{ language.nav.contact.url }}">{{ language.nav.contact.text }}</a></li>
           </ul>
         </nav>
-      </div>
 
-      <div class="hamburger-btn-box">
-        <div class="flag-container">
-          <a href="{{ language_pt }}" aria-label="Toggle the language to select Portuguese">
+
+        <div class="hamburger-btn-box">
+          <div class="flag-container">
+            <a href="{{ language_pt }}" aria-label="Toggle the language to select Portuguese">
             <svg viewBox="0 0 36 36"><path fill="#060" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z"></path><path fill="#D52B1E" d="M32 5H15v26h17a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"></path><path fill="#FFCC4D" d="M15 10a8 8 0 0 0-8 8a8 8 0 1 0 16 0a8 8 0 0 0-8-8zm-6.113 4.594l1.602 1.602l-2.46 1.23a6.95 6.95 0 0 1 .858-2.832zm-.858 3.979l4.4 2.207l-2.706 1.804l.014.021a6.963 6.963 0 0 1-1.708-4.032zM14 24.92a6.945 6.945 0 0 1-2.592-.92H14v.92zM14 23h-3.099L14 20.934V23zm0-3.268l-.607.405L9.118 18l2.116-1.058L14 19.707v.025zm0-1.439l-3.543-3.543l3.543.59v2.953zm0-3.992l-4.432-.713A6.983 6.983 0 0 1 14 11.08v3.221zm7.113.293a6.95 6.95 0 0 1 .858 2.833l-2.46-1.23l1.602-1.603zM16 11.08a6.987 6.987 0 0 1 4.432 2.508L16 14.301V11.08zm0 4.26l3.543-.591L16 18.293V15.34zm0 4.367l2.765-2.765L20.882 18l-4.274 2.137l-.608-.405v-.025zm0 5.213V24h2.592a6.945 6.945 0 0 1-2.592.92zM16 23v-2.066L19.099 23H16zm4.264-.395l.014-.021l-2.706-1.804l4.4-2.207a6.976 6.976 0 0 1-1.708 4.032z"></path><path fill="#D52B1E" d="M11 13v7a4 4 0 0 0 8 0v-7h-8z"></path><path fill="#FFF" d="M12 14v6a3 3 0 0 0 6 0v-6h-6z"></path><path fill="#829ACD" d="M13 17h4v2h-4z"></path><path fill="#829ACD" d="M14 16h2v4h-2z"></path><path fill="#039" d="M12 17h1v2h-1zm2 0h2v2h-2zm3 0h1v2h-1zm-3 3h2v2h-2zm0-6h2v2h-2z"></path></svg>
           </a>
 
-          <a href="{{ language_en }}" aria-label="Toggle the language to select English">
+            <a href="{{ language_en }}" aria-label="Toggle the language to select English">
             <svg viewBox="0 -4 28 28"><rect width="28" height="20" rx="2" fill="white"></rect> <mask id="mask0_503_2952" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="20"> <rect width="28" height="20" rx="2" fill="white"></rect> </mask> <g mask="url(#mask0_503_2952)"> <rect width="28" height="20" fill="#0A17A7"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M-1.28244 -1.91644L10.6667 6.14335V-1.33333H17.3334V6.14335L29.2825 -1.91644L30.7737 0.294324L21.3263 6.66667H28V13.3333H21.3263L30.7737 19.7057L29.2825 21.9165L17.3334 13.8567V21.3333H10.6667V13.8567L-1.28244 21.9165L-2.77362 19.7057L6.67377 13.3333H2.95639e-05V6.66667H6.67377L-2.77362 0.294324L-1.28244 -1.91644Z" fill="white"></path> <path d="M18.668 6.33219L31.3333 -2" stroke="#DB1F35" stroke-width="0.666667" stroke-linecap="round"></path> <path d="M20.0128 13.6975L31.3666 21.3503" stroke="#DB1F35" stroke-width="0.666667" stroke-linecap="round"></path> <path d="M8.00555 6.31046L-3.83746 -1.67099" stroke="#DB1F35" stroke-width="0.666667" stroke-linecap="round"></path> <path d="M9.29006 13.6049L-3.83746 22.3105" stroke="#DB1F35" stroke-width="0.666667" stroke-linecap="round"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H12V20H16V12H28V8H16V0H12V8H0V12Z" fill="#E6273E"></path></g> <defs> <clipPath id="clip0_503_2952"> <rect width="28" height="20" rx="2" fill="white"></rect> </clipPath> </defs></svg>
           </a>
+          </div>
+
+          <button class="hamburger-btn" id="hamburger" aria-label="Toggle The Navigation Menu" aria-controls="navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        
-        <button class="hamburger-btn" id="hamburger" aria-label="Toggle The Navigation Menu" aria-controls="navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+
+        <a href="{{ language.nav.button.link }}" class="cmp-main-btn cmp-main-btn--header-btn">{{ language.nav.button.name }}</a>
+
       </div>
-
-      <a href="{{ language.nav.button.link }}" class="cmp-main-btn cmp-main-btn--header-btn">{{ language.nav.button.name }}</a>
-
     </div>
   </div>
 </header>
