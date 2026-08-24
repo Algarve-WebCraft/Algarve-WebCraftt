@@ -104,6 +104,10 @@
   /* \\\\\\\\\\\\\\\\\\\\\\\      *** PRICING / SECTION-ONE / COMPARE ***       \\\\\\\\\\\\\\\\\\\\\\\\ */
   /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
+  .cmp-hero-heading--pg4 {
+    margin-bottom: 3rem;
+  }
+
   .compare-section-container {
     width: 100%;
     text-align: left;

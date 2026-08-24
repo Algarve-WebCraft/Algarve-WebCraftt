@@ -382,7 +382,7 @@ body_class: 'home'
     <div class="cmp-header-text-container" data-animate="fade-in">
       <span class="cmp-topper-heading">{{ ways_topper }}</span>
       <h2 id="ways-section" class="cmp-main-heading">{{ ways_heading }}<span class="cmp-heading-span cmp-gradient-text">{{ ways_span }}</span></h2>
-      <p class="cmp-main-text">{{ ways_text }}</p>
+      <p class="cmp-main-text">{{ ways_text | safe }}</p>
     </div>
 
     <div class="ways-section-container" data-animate="shutter-horizontal">
