@@ -92,7 +92,7 @@ function gsapOpeningHomeAnimations() {
 
   if (!document.body.classList.contains("home")) return;
 
-  return;
+  /* return; */
 
   const tl = gsap.timeline({
     defaults: { ease: "power3.out" },
